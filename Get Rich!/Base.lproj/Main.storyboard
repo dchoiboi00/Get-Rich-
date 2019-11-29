@@ -48,7 +48,10 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CG3-CH-DkH" secondAttribute="height" multiplier="3:2" id="mYQ-Fy-ulJ"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="rubberband"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                                        <state key="normal" title="x2">
+                                            <color key="titleColor" red="0.9469186230964467" green="0.83388970726440903" blue="0.14535525714292755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87256476267927874" green="1" blue="0.97015265441775411" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -56,8 +59,8 @@
                                     <constraint firstAttribute="height" constant="60" id="G9F-3a-l1A"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bill" translatesAutoresizingMaskIntoConstraints="NO" id="oXI-ME-413">
-                                <rect key="frame" x="199" y="756" width="16" height="16"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billStack" translatesAutoresizingMaskIntoConstraints="NO" id="oXI-ME-413">
+                                <rect key="frame" x="20" y="756" width="374" height="16"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="MF6-p6-3fm" appends="YES" id="Qi5-29-9tk"/>
@@ -86,14 +89,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUW-08-se8">
+                                <rect key="frame" x="61" y="733.5" width="116" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="9mk-6r-NKW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motto: Placeholder" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zS9-Tc-r3A">
+                                <rect key="frame" x="50" y="216" width="314" height="28.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.55968848852838959" green="0.76021996871675257" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="WO7-qJ-AE8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="45T-VU-HUQ"/>
+                            <constraint firstItem="zS9-Tc-r3A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Ej-5m-4C2"/>
                             <constraint firstItem="WO7-qJ-AE8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cab-ek-rPd"/>
+                            <constraint firstItem="zS9-Tc-r3A" firstAttribute="top" secondItem="WO7-qJ-AE8" secondAttribute="bottom" constant="50" id="IR8-ca-eva"/>
                             <constraint firstItem="CbG-4Y-gdb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y47-iV-Nli"/>
                             <constraint firstItem="l0i-nv-dzy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="an2-rc-1Ga"/>
+                            <constraint firstItem="oXI-ME-413" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bhX-r8-xkg"/>
                             <constraint firstItem="CbG-4Y-gdb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="g5O-ip-rNZ"/>
+                            <constraint firstItem="zS9-Tc-r3A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="iau-TQ-MM5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wUW-08-se8" secondAttribute="trailing" symbolic="YES" id="nUf-cE-4K8"/>
+                            <constraint firstItem="wUW-08-se8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="pme-Nf-Ii9"/>
+                            <constraint firstAttribute="trailing" secondItem="oXI-ME-413" secondAttribute="trailing" constant="20" id="qjk-xW-mg3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zS9-Tc-r3A" secondAttribute="trailing" constant="50" id="uGB-VE-Vhu"/>
+                            <constraint firstItem="wUW-08-se8" firstAttribute="centerY" secondItem="oXI-ME-413" secondAttribute="centerY" constant="-12" id="ui8-5S-WcU"/>
                             <constraint firstItem="oXI-ME-413" firstAttribute="top" secondItem="l0i-nv-dzy" secondAttribute="bottom" constant="25" id="x5x-X7-yoG"/>
                             <constraint firstItem="CbG-4Y-gdb" firstAttribute="top" secondItem="oXI-ME-413" secondAttribute="bottom" constant="40" id="xkG-BI-5Y6"/>
                             <constraint firstItem="oXI-ME-413" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zv5-GY-hpU"/>
@@ -102,7 +129,10 @@
                     </view>
                     <connections>
                         <outlet property="balanceLabel" destination="WO7-qJ-AE8" id="0Se-0m-i6n"/>
+                        <outlet property="billSizeLabel" destination="wUW-08-se8" id="WCB-nw-Y6d"/>
                         <outlet property="investmentsLabel" destination="6ug-rZ-HmN" id="x6Z-fd-HBH"/>
+                        <outlet property="mottoLabel" destination="zS9-Tc-r3A" id="Vfy-EO-wc7"/>
+                        <outlet property="multiplierButton" destination="CG3-CH-DkH" id="zOq-fm-Hj2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -198,9 +228,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bill" width="345.5" height="498.5"/>
+        <image name="billStack" width="418.5" height="406.5"/>
         <image name="handshake" width="320.5" height="183.5"/>
         <image name="investments" width="786.5" height="880"/>
-        <image name="rubberband" width="563" height="328.5"/>
     </resources>
 </document>

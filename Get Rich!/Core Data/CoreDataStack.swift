@@ -76,5 +76,23 @@ final class CoreDataStack: NSObject {
         }
     }
     
+    func clearContext() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try context.execute(deleteRequest)
+        } catch let error as NSError {
+            print("Error in clearing context, step 1. \(error), \(error.userInfo)")
+        }
+        
+        do {
+            try context.save()
+        } catch let error as NSError {
+            print("Error in clearing context. \(error), \(error.userInfo)")
+        }
+        update()
+    }
+    
 }
 
