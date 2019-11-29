@@ -10,7 +10,9 @@ import UIKit
 
 class MainVC: UIViewController, UIPopoverPresentationControllerDelegate {
     
-    var didInit = false
+    var tooManyCount: Bool = {
+        return CoreDataStack.shared.Game.count > 1
+    }()
     
     // MARK: - Outlets
     @IBOutlet weak var balanceLabel: UILabel!
@@ -22,10 +24,8 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !didInit {
-            CoreDataStack.shared.clearContext()
-            CoreDataStack.shared.initGame(balance: 0, billSize: 1, multiplier: 2, investments: 0, motto: "That man is richest whose pleasures are cheapest.")
-            didInit = true
+        if tooManyCount {
+            CoreDataStack.shared.deleteLast()
         }
         
         refreshLabels()
@@ -54,7 +54,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate {
     
     func refreshLabels() {
         print("count: \(CoreDataStack.shared.Game.count)")
-        if let game = CoreDataStack.shared.Game.last as? Game {
+        if let game = CoreDataStack.shared.Game.first as? Game {
             balanceLabel.text = formatAsCurrency(Double(game.balance))
             investmentsLabel.text = "\(formatAsCurrency(Double(game.investments)))/s"
             billSizeLabel.text = formatAsCurrency(Double(game.billSize))
@@ -66,7 +66,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate {
     // MARK: - Actions
     
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {
-        if let game = CoreDataStack.shared.Game.last as? Game {
+        if let game = CoreDataStack.shared.Game.first as? Game {
             game.balance += game.billSize
         }
         refreshLabels()

@@ -44,20 +44,22 @@ final class CoreDataStack: NSObject {
         }
     }
     
-    func initGame(balance: Int16, billSize: Int16, multiplier: Int16, investments: Int16, motto: String) {
-        
-        if let entity = NSEntityDescription.entity(forEntityName: "Game", in: context) {
-            let game = NSManagedObject(entity: entity, insertInto: context)
-            game.setValue(balance, forKeyPath: "balance")
-            game.setValue(billSize, forKeyPath: "billSize")
-            game.setValue(multiplier, forKeyPath: "multiplier")
-            game.setValue(investments, forKeyPath: "investments")
-            game.setValue(motto, forKeyPath: "motto")
-            
-            do {
-                try context.save()
-            } catch let error as NSError {
-                print("Could not initialize the game. \(error), \(error.userInfo)")
+    override init() {
+        super.init()
+        if Game.count == 0 {
+            if let entity = NSEntityDescription.entity(forEntityName: "Game", in: context) {
+                let game = NSManagedObject(entity: entity, insertInto: context)
+                game.setValue(0, forKeyPath: "balance")
+                game.setValue(1, forKeyPath: "billSize")
+                game.setValue(2, forKeyPath: "multiplier")
+                game.setValue(0, forKeyPath: "investments")
+                game.setValue("That man is richest whose pleasures are cheapest.", forKeyPath: "motto")
+                
+                do {
+                    try context.save()
+                } catch let error as NSError {
+                    print("Could not initialize the game. \(error), \(error.userInfo)")
+                }
             }
         }
         update()
@@ -89,6 +91,18 @@ final class CoreDataStack: NSObject {
             try context.save()
         } catch let error as NSError {
             print("Error in clearing context. \(error), \(error.userInfo)")
+        }
+        update()
+    }
+    
+    func deleteLast(){
+        if let last = Game.last {
+            context.delete(last)
+            do {
+                try context.save()
+            } catch let error as NSError {
+                print("Could not delete the item. \(error), \(error.userInfo)")
+            }
         }
         update()
     }
