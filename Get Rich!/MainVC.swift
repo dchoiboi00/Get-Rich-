@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainVC: UIViewController, UIPopoverPresentationControllerDelegate {
+class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, requiresRefreshDelegate {
     
     var tooManyCount: Bool = {
         return CoreDataStack.shared.Game.count > 1
@@ -35,17 +35,21 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate {
         switch segue.identifier {
         case "BusinessSegue":
             if let vc = segue.destination as? BusinessTVC {
-                print("Do Business!")
+                vc.delegate = self
                 vc.modalPresentationStyle = .popover
-                vc.popoverPresentationController?.delegate = self
-                vc.popoverPresentationController?.sourceView = self.view
+                vc.popoverPresentationController!.delegate = self
                 vc.preferredContentSize = CGSize(width: 300, height: 500)
+                
             }
         case "InvestSegue":
             print("Invest")
         default:
             fatalError("Invalid segue identifier")
         }
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+        print("Did dismiss popover")
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
@@ -60,7 +64,14 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate {
             billSizeLabel.text = formatAsCurrency(Double(game.billSize))
             mottoLabel.text = "Motto:   \(game.motto ?? "")"
             multiplierButton.setTitle("x\(game.multiplier.description)", for: .normal)
+            CoreDataStack.shared.saveContext()
         }
+    }
+    
+    // MARK: - Delegate
+    
+    func refresh() {
+        refreshLabels()
     }
     
     // MARK: - Actions
