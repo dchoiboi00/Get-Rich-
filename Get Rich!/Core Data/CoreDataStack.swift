@@ -48,7 +48,6 @@ final class CoreDataStack: NSObject {
         
         if let entity = NSEntityDescription.entity(forEntityName: "Game", in: context) {
             let game = NSManagedObject(entity: entity, insertInto: context)
-            print("storing billsize as \(billSize)")
             game.setValue(balance, forKeyPath: "balance")
             game.setValue(billSize, forKeyPath: "billSize")
             game.setValue(multiplier, forKeyPath: "multiplier")

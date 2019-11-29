@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainVC: UIViewController {
+class MainVC: UIViewController, UIPopoverPresentationControllerDelegate {
     
     var didInit = false
     
@@ -35,13 +35,21 @@ class MainVC: UIViewController {
         switch segue.identifier {
         case "BusinessSegue":
             if let vc = segue.destination as? BusinessTVC {
-                //vc.delegate = self
+                print("Do Business!")
+                vc.modalPresentationStyle = .popover
+                vc.popoverPresentationController?.delegate = self
+                vc.popoverPresentationController?.sourceView = self.view
+                vc.preferredContentSize = CGSize(width: 300, height: 500)
             }
         case "InvestSegue":
             print("Invest")
         default:
             fatalError("Invalid segue identifier")
         }
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
     
     func refreshLabels() {

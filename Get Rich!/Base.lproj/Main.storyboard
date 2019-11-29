@@ -29,7 +29,7 @@
                                         <state key="normal" title="Button" image="handshake"/>
                                         <connections>
                                             <segue destination="TCt-VL-YRT" kind="popoverPresentation" identifier="BusinessSegue" popoverAnchorView="3xl-h0-WYb" id="EYq-pO-aAr">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
                                             </segue>
                                         </connections>
                                     </button>
@@ -40,7 +40,9 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="investments"/>
                                         <connections>
-                                            <segue destination="uHU-Qb-IvH" kind="presentation" identifier="InvestSegue" id="eSv-wd-hTp"/>
+                                            <segue destination="uHU-Qb-IvH" kind="popoverPresentation" identifier="InvestSegue" popoverAnchorView="hHt-jv-4ou" id="eSv-wd-hTp">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-CH-DkH">
@@ -60,14 +62,14 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billStack" translatesAutoresizingMaskIntoConstraints="NO" id="oXI-ME-413">
-                                <rect key="frame" x="20" y="756" width="374" height="16"/>
+                                <rect key="frame" x="20" y="365.5" width="374.00000000000011" height="406.5"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="MF6-p6-3fm" appends="YES" id="Qi5-29-9tk"/>
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l0i-nv-dzy">
-                                <rect key="frame" x="87.5" y="707" width="239" height="24"/>
+                                <rect key="frame" x="87.5" y="316.5" width="239" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investment Income:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1L-aO-4vl">
                                         <rect key="frame" x="0.0" y="0.0" width="172.5" height="24"/>
@@ -90,7 +92,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUW-08-se8">
-                                <rect key="frame" x="61" y="733.5" width="116" height="37"/>
+                                <rect key="frame" x="61" y="538.5" width="116" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="9mk-6r-NKW"/>
                                 </constraints>
@@ -148,28 +150,77 @@
         <!--BusinessTVC-->
         <scene sceneID="XYA-aM-9b6">
             <objects>
-                <tableViewController modalPresentationStyle="formSheet" id="TCt-VL-YRT" customClass="BusinessTVC" customModule="Get_Rich_" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XQG-b9-fRM">
+                <tableViewController definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" modalTransitionStyle="flipHorizontal" modalPresentationStyle="currentContext" id="TCt-VL-YRT" customClass="BusinessTVC" customModule="Get_Rich_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XQG-b9-fRM">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" id="qmO-gu-hEm" customClass="BusinessTVCell" customModule="Get_Rich_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="300" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qmO-gu-hEm" id="9jw-fd-gZR">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <sections>
+                            <tableViewSection id="j52-Uc-6pB">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" textLabel="Voh-Zm-RRx" imageView="J6G-7i-tat" style="IBUITableViewCellStyleDefault" id="qmO-gu-hEm" customClass="BusinessTVCell" customModule="Get_Rich_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qmO-gu-hEm" id="9jw-fd-gZR">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Lemonade Stand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Voh-Zm-RRx">
+                                                    <rect key="frame" x="91" y="0.0" width="193" height="69.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="lemonade_stand" id="J6G-7i-tat">
+                                                    <rect key="frame" x="16" y="0.0" width="60" height="69.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" textLabel="q2X-on-BgZ" imageView="IdU-Gd-hfn" style="IBUITableViewCellStyleDefault" id="XJu-Fs-frq" customClass="BusinessTVCell" customModule="Get_Rich_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="300" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XJu-Fs-frq" id="EzI-rZ-rBl">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Massage Station" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q2X-on-BgZ">
+                                                    <rect key="frame" x="124" y="0.0" width="160" height="69.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="massage" id="IdU-Gd-hfn">
+                                                    <rect key="frame" x="16" y="0.0" width="93" height="69.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" id="GYS-Kq-eFM" customClass="BusinessTVCell" customModule="Get_Rich_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140" width="300" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GYS-Kq-eFM" id="Vha-zR-lHb">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="TCt-VL-YRT" id="vvk-23-8wt"/>
                             <outlet property="delegate" destination="TCt-VL-YRT" id="n05-vf-G1z"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <value key="contentSizeForViewInPopover" type="size" width="300" height="500"/>
-                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="500"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvC-uA-nHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -231,5 +282,7 @@
         <image name="billStack" width="418.5" height="406.5"/>
         <image name="handshake" width="320.5" height="183.5"/>
         <image name="investments" width="786.5" height="880"/>
+        <image name="lemonade_stand" width="352.5" height="406.5"/>
+        <image name="massage" width="320" height="240"/>
     </resources>
 </document>
