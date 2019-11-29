@@ -43,6 +43,16 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
             }
         case "InvestSegue":
             print("Invest")
+        case "SettingsSegue":
+            print("Settings")
+            if let vc = segue.destination as? SettingsVC {
+                vc.delegate = self
+                vc.modalPresentationStyle = .popover
+                vc.popoverPresentationController?.delegate = self
+                
+            }
+        case "InfoSegue":
+            print("Show info screen")
         default:
             fatalError("Invalid segue identifier")
         }

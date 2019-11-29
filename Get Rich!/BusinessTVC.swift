@@ -56,6 +56,8 @@ class BusinessTVC: UITableViewController {
 //        return cell
 //    }
 
+    // MARK: - Buttons
+    
     func determineBtns() {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.billSize == lemonade_stand.perSwipe {
@@ -74,6 +76,8 @@ class BusinessTVC: UITableViewController {
         button.setImage(UIImage(named: "checkmark"), for: .normal)
         button.isUserInteractionEnabled = false
     }
+    
+    // MARK: - Actions
     
     @IBAction func onMassageBtn(_ sender: UIButton) {
         print("Pressed massage button")

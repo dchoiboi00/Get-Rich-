@@ -17,6 +17,9 @@
 		D205FD9C238CC12100235539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D205FD9B238CC12100235539 /* Assets.xcassets */; };
 		D205FD9F238CC12100235539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D205FD9D238CC12100235539 /* LaunchScreen.storyboard */; };
 		D21B99012391AEB00094934E /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B99002391AEB00094934E /* GameData.swift */; };
+		D21B99032391B7DE0094934E /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B99022391B7DE0094934E /* SettingsVC.swift */; };
+		D21B99052391C0880094934E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B99042391C0880094934E /* BundleExtension.swift */; };
+		D21B99072391C0960094934E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B99062391C0950094934E /* AboutViewController.swift */; };
 		D2A0A507238DBD5200B16027 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A0A506238DBD5200B16027 /* Utils.swift */; };
 		D2A0A509238DBE3400B16027 /* BusinessTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A0A508238DBE3400B16027 /* BusinessTVC.swift */; };
 		D2A0A50B238DBFBF00B16027 /* BusinessTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A0A50A238DBFBF00B16027 /* BusinessTVCell.swift */; };
@@ -35,6 +38,9 @@
 		D205FD9E238CC12100235539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D205FDA0238CC12100235539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D21B99002391AEB00094934E /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		D21B99022391B7DE0094934E /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		D21B99042391C0880094934E /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		D21B99062391C0950094934E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D2A0A506238DBD5200B16027 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D2A0A508238DBE3400B16027 /* BusinessTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTVC.swift; sourceTree = "<group>"; };
 		D2A0A50A238DBFBF00B16027 /* BusinessTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTVCell.swift; sourceTree = "<group>"; };
@@ -82,18 +88,29 @@
 			isa = PBXGroup;
 			children = (
 				D205FD91238CC12100235539 /* AppDelegate.swift */,
+				D21B99062391C0950094934E /* AboutViewController.swift */,
 				D205FD93238CC12100235539 /* MainVC.swift */,
 				D205FD95238CC12100235539 /* Main.storyboard */,
+				D21B99022391B7DE0094934E /* SettingsVC.swift */,
 				D2A0A508238DBE3400B16027 /* BusinessTVC.swift */,
 				D21B99002391AEB00094934E /* GameData.swift */,
 				D2A0A50A238DBFBF00B16027 /* BusinessTVCell.swift */,
-				D2A0A506238DBD5200B16027 /* Utils.swift */,
+				D21B99082391C0B60094934E /* Utility */,
 				D205FD9B238CC12100235539 /* Assets.xcassets */,
 				D205FD9D238CC12100235539 /* LaunchScreen.storyboard */,
 				D205FDA0238CC12100235539 /* Info.plist */,
 				D203C6EF23906E9900289A0E /* Core Data */,
 			);
 			path = "Get Rich!";
+			sourceTree = "<group>";
+		};
+		D21B99082391C0B60094934E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D2A0A506238DBD5200B16027 /* Utils.swift */,
+				D21B99042391C0880094934E /* BundleExtension.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21B99032391B7DE0094934E /* SettingsVC.swift in Sources */,
 				D205FD94238CC12100235539 /* MainVC.swift in Sources */,
 				D21B99012391AEB00094934E /* GameData.swift in Sources */,
 				D2A0A50B238DBFBF00B16027 /* BusinessTVCell.swift in Sources */,
@@ -177,6 +195,8 @@
 				D203C6EE23906E8000289A0E /* Game+CoreDataProperties.swift in Sources */,
 				D2A0A507238DBD5200B16027 /* Utils.swift in Sources */,
 				D203C6ED23906E8000289A0E /* Game+CoreDataClass.swift in Sources */,
+				D21B99072391C0960094934E /* AboutViewController.swift in Sources */,
+				D21B99052391C0880094934E /* BundleExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
