@@ -41,6 +41,11 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
             }
         case "InvestSegue":
             print("Invest")
+            if let vc = segue.destination as? InvestTVC {
+                vc.delegate = self
+                vc.modalPresentationStyle = .popover
+                vc.popoverPresentationController!.delegate = self
+            }
         case "SettingsSegue":
             print("Settings")
             if let vc = segue.destination as? SettingsVC {

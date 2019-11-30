@@ -112,11 +112,11 @@
 		D251654C23920B04002AD7EF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D251654D23920B04002AD7EF /* SettingsVC.swift */,
 				D251654F23920B04002AD7EF /* AboutViewController.swift */,
-				D251655923920BAD002AD7EF /* InvestTVC.swift */,
 				D251655023920B04002AD7EF /* BusinessTVC.swift */,
+				D251655923920BAD002AD7EF /* InvestTVC.swift */,
 				D251655123920B04002AD7EF /* MainVC.swift */,
+				D251654D23920B04002AD7EF /* SettingsVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
