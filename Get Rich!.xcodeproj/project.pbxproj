@@ -11,17 +11,18 @@
 		D203C6EE23906E8000289A0E /* Game+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203C6EC23906E8000289A0E /* Game+CoreDataProperties.swift */; };
 		D203C6F1239078DC00289A0E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203C6F0239078DC00289A0E /* CoreDataStack.swift */; };
 		D205FD92238CC12100235539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D205FD91238CC12100235539 /* AppDelegate.swift */; };
-		D205FD94238CC12100235539 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D205FD93238CC12100235539 /* MainVC.swift */; };
 		D205FD97238CC12100235539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D205FD95238CC12100235539 /* Main.storyboard */; };
 		D205FD9A238CC12100235539 /* Get_Rich_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D205FD98238CC12100235539 /* Get_Rich_.xcdatamodeld */; };
 		D205FD9C238CC12100235539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D205FD9B238CC12100235539 /* Assets.xcassets */; };
 		D205FD9F238CC12100235539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D205FD9D238CC12100235539 /* LaunchScreen.storyboard */; };
 		D21B99012391AEB00094934E /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B99002391AEB00094934E /* GameData.swift */; };
-		D21B99032391B7DE0094934E /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B99022391B7DE0094934E /* SettingsVC.swift */; };
 		D21B99052391C0880094934E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B99042391C0880094934E /* BundleExtension.swift */; };
-		D21B99072391C0960094934E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B99062391C0950094934E /* AboutViewController.swift */; };
+		D251655223920B04002AD7EF /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251654D23920B04002AD7EF /* SettingsVC.swift */; };
+		D251655423920B04002AD7EF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251654F23920B04002AD7EF /* AboutViewController.swift */; };
+		D251655523920B04002AD7EF /* BusinessTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251655023920B04002AD7EF /* BusinessTVC.swift */; };
+		D251655623920B04002AD7EF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251655123920B04002AD7EF /* MainVC.swift */; };
+		D251655A23920BAD002AD7EF /* InvestTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251655923920BAD002AD7EF /* InvestTVC.swift */; };
 		D2A0A507238DBD5200B16027 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A0A506238DBD5200B16027 /* Utils.swift */; };
-		D2A0A509238DBE3400B16027 /* BusinessTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A0A508238DBE3400B16027 /* BusinessTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,18 +31,19 @@
 		D203C6F0239078DC00289A0E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D205FD8E238CC12000235539 /* Get Rich!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get Rich!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D205FD91238CC12100235539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D205FD93238CC12100235539 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainVC.swift; path = ../MainVC.swift; sourceTree = "<group>"; };
 		D205FD96238CC12100235539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D205FD99238CC12100235539 /* Get_Rich_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Get_Rich_.xcdatamodel; sourceTree = "<group>"; };
 		D205FD9B238CC12100235539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D205FD9E238CC12100235539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D205FDA0238CC12100235539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D21B99002391AEB00094934E /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
-		D21B99022391B7DE0094934E /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsVC.swift; path = ../SettingsVC.swift; sourceTree = "<group>"; };
 		D21B99042391C0880094934E /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
-		D21B99062391C0950094934E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = ../AboutViewController.swift; sourceTree = "<group>"; };
+		D251654D23920B04002AD7EF /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		D251654F23920B04002AD7EF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		D251655023920B04002AD7EF /* BusinessTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTVC.swift; sourceTree = "<group>"; };
+		D251655123920B04002AD7EF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		D251655923920BAD002AD7EF /* InvestTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestTVC.swift; sourceTree = "<group>"; };
 		D2A0A506238DBD5200B16027 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		D2A0A508238DBE3400B16027 /* BusinessTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BusinessTVC.swift; path = ../BusinessTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				D205FD91238CC12100235539 /* AppDelegate.swift */,
-				D207DF0823920985006E3AC5 /* New Group */,
 				D205FD95238CC12100235539 /* Main.storyboard */,
-				D21B99002391AEB00094934E /* GameData.swift */,
+				D251654C23920B04002AD7EF /* View Controllers */,
+				D2BFEEC3239209FF0076ECA5 /* Model */,
 				D21B99082391C0B60094934E /* Utility */,
 				D205FD9B238CC12100235539 /* Assets.xcassets */,
 				D205FD9D238CC12100235539 /* LaunchScreen.storyboard */,
@@ -98,17 +100,6 @@
 			path = "Get Rich!";
 			sourceTree = "<group>";
 		};
-		D207DF0823920985006E3AC5 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				D21B99062391C0950094934E /* AboutViewController.swift */,
-				D205FD93238CC12100235539 /* MainVC.swift */,
-				D21B99022391B7DE0094934E /* SettingsVC.swift */,
-				D2A0A508238DBE3400B16027 /* BusinessTVC.swift */,
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		D21B99082391C0B60094934E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +107,26 @@
 				D21B99042391C0880094934E /* BundleExtension.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		D251654C23920B04002AD7EF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D251654D23920B04002AD7EF /* SettingsVC.swift */,
+				D251654F23920B04002AD7EF /* AboutViewController.swift */,
+				D251655923920BAD002AD7EF /* InvestTVC.swift */,
+				D251655023920B04002AD7EF /* BusinessTVC.swift */,
+				D251655123920B04002AD7EF /* MainVC.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D2BFEEC3239209FF0076ECA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D21B99002391AEB00094934E /* GameData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,18 +200,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D21B99032391B7DE0094934E /* SettingsVC.swift in Sources */,
-				D205FD94238CC12100235539 /* MainVC.swift in Sources */,
+				D251655523920B04002AD7EF /* BusinessTVC.swift in Sources */,
+				D251655A23920BAD002AD7EF /* InvestTVC.swift in Sources */,
 				D21B99012391AEB00094934E /* GameData.swift in Sources */,
+				D251655423920B04002AD7EF /* AboutViewController.swift in Sources */,
 				D205FD9A238CC12100235539 /* Get_Rich_.xcdatamodeld in Sources */,
 				D203C6F1239078DC00289A0E /* CoreDataStack.swift in Sources */,
-				D2A0A509238DBE3400B16027 /* BusinessTVC.swift in Sources */,
 				D205FD92238CC12100235539 /* AppDelegate.swift in Sources */,
 				D203C6EE23906E8000289A0E /* Game+CoreDataProperties.swift in Sources */,
 				D2A0A507238DBD5200B16027 /* Utils.swift in Sources */,
 				D203C6ED23906E8000289A0E /* Game+CoreDataClass.swift in Sources */,
-				D21B99072391C0960094934E /* AboutViewController.swift in Sources */,
 				D21B99052391C0880094934E /* BundleExtension.swift in Sources */,
+				D251655223920B04002AD7EF /* SettingsVC.swift in Sources */,
+				D251655623920B04002AD7EF /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

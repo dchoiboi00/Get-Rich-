@@ -40,6 +40,11 @@
                                             <constraint firstAttribute="width" secondItem="hHt-jv-4ou" secondAttribute="height" multiplier="3:2" id="75B-cF-7Mh"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="investments"/>
+                                        <connections>
+                                            <segue destination="12b-ax-Hvp" kind="popoverPresentation" identifier="InvestSegue" popoverAnchorView="hHt-jv-4ou" id="OB9-pS-yrJ">
+                                                <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-CH-DkH">
                                         <rect key="frame" x="234" y="0.0" width="90" height="60"/>
@@ -609,6 +614,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvC-uA-nHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-426.08695652173918" y="730.58035714285711"/>
+        </scene>
+        <!--InvestTVC-->
+        <scene sceneID="dZl-Va-Yb1">
+            <objects>
+                <tableViewController id="12b-ax-Hvp" customClass="InvestTVC" customModule="Get_Rich_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="okw-cS-SFe">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dtc-7T-0g4">
+                                <rect key="frame" x="0.0" y="28" width="300" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dtc-7T-0g4" id="hNa-gh-ovv">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="12b-ax-Hvp" id="vI1-qq-m6y"/>
+                            <outlet property="delegate" destination="12b-ax-Hvp" id="wmV-08-iW8"/>
+                        </connections>
+                    </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="450"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9RU-vA-Ady" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="730"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="bEt-tL-zGL">
