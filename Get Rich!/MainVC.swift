@@ -38,8 +38,6 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
                 vc.delegate = self
                 vc.modalPresentationStyle = .popover
                 vc.popoverPresentationController!.delegate = self
-                vc.preferredContentSize = CGSize(width: 300, height: 500)
-                
             }
         case "InvestSegue":
             print("Invest")
@@ -49,7 +47,6 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
                 vc.delegate = self
                 vc.modalPresentationStyle = .popover
                 vc.popoverPresentationController?.delegate = self
-                
             }
         case "InfoSegue":
             print("Show info screen")

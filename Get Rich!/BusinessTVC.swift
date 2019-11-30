@@ -41,60 +41,40 @@ class BusinessTVC: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 5
-//    }
-
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BusinessCell", for: indexPath) as? BusinessTVCell else {
-//            fatalError("Expected BusinessCell")
-//        }
-//
-//        // Configure the cell...
-//
-//        return cell
-//    }
-
     // MARK: - Buttons
     
     func determineBtns() {
         if let game = CoreDataStack.shared.Game.first as? Game {
             disableBtn(button: lemonadeBtn)
             
-            if game.billSize > massage_station.perSwipe {
-                disableBtn(button: massageBtn)
-            } else {
+            if game.billSize < massage_station.perSwipe {
                 massageBtn.setTitle(formatAsCurrency(Double(massage_station.purchaseCost)), for: .normal)
+            } else {
+                disableBtn(button: massageBtn)
             }
             
-            if game.billSize > pasta_bar.perSwipe {
-                disableBtn(button: pastaBtn)
-            } else {
+            if game.billSize < pasta_bar.perSwipe {
                 pastaBtn.setTitle(formatAsCurrency(Double(pasta_bar.purchaseCost)), for: .normal)
+            } else {
+                disableBtn(button: pastaBtn)
             }
             
-            if game.billSize > beauty_salon.perSwipe {
-                disableBtn(button: salonBtn)
-            } else {
+            if game.billSize < beauty_salon.perSwipe {
                 salonBtn.setTitle(formatAsCurrency(Double(beauty_salon.purchaseCost)), for: .normal)
+            } else {
+                disableBtn(button: salonBtn)
             }
             
-            if game.billSize > jersey_shop.perSwipe {
+            if game.billSize < jersey_shop.perSwipe {
+                jerseyBtn.setTitle("$1K", for: .normal)
+            } else {
                 disableBtn(button: jerseyBtn)
-            } else {
-                jerseyBtn.setTitle(formatAsCurrency(Double(jersey_shop.purchaseCost)), for: .normal)
             }
             
-            if game.billSize > luxury_jewelry.perSwipe {
-                disableBtn(button: jewelryBtn)
+            if game.billSize < luxury_jewelry.perSwipe {
+                jewelryBtn.setTitle("$5K", for: .normal)
             } else {
-                jewelryBtn.setTitle(formatAsCurrency(Double(luxury_jewelry.purchaseCost)), for: .normal)
+                disableBtn(button: jewelryBtn)
             }
         }
     }
