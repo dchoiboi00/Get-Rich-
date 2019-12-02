@@ -680,7 +680,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$40 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3so-SD-iVV">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$7 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3so-SD-iVV">
                                                             <rect key="frame" x="0.0" y="30" width="128" height="20"/>
                                                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -694,10 +694,13 @@
                                                         <constraint firstAttribute="width" secondItem="UnW-sJ-BUx" secondAttribute="height" multiplier="1:1" id="W7e-8V-un3"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
-                                                    <state key="normal" title="$151">
+                                                    <state key="normal" title="$152">
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onMSFTBtn:" destination="12b-ax-Hvp" eventType="touchUpInside" id="npT-z0-fF7"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.68174238779999996" green="0.98496986040000001" blue="0.71789505259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -737,7 +740,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$40 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKg-ed-j2u">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKg-ed-j2u">
                                                             <rect key="frame" x="0.0" y="30" width="128" height="20"/>
                                                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -755,6 +758,9 @@
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onFBBtn:" destination="12b-ax-Hvp" eventType="touchUpInside" id="rvo-oY-8dP"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.68174238779999996" green="0.98496986040000001" blue="0.71789505259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -794,7 +800,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$40 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c48-H7-TaA">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$13 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c48-H7-TaA">
                                                             <rect key="frame" x="0.0" y="30" width="128" height="20"/>
                                                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -808,10 +814,13 @@
                                                         <constraint firstAttribute="width" secondItem="3KT-ue-vPw" secondAttribute="height" multiplier="1:1" id="aKh-fl-Z1Y"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
-                                                    <state key="normal" title="$267">
+                                                    <state key="normal" title="$268">
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onAAPLBtn:" destination="12b-ax-Hvp" eventType="touchUpInside" id="fNo-XI-cj3"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.68174238779999996" green="0.98496986040000001" blue="0.71789505259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -851,7 +860,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$40 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYx-2x-Hl5">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYx-2x-Hl5">
                                                             <rect key="frame" x="0.0" y="30" width="128" height="20"/>
                                                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -869,6 +878,9 @@
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onNFLXBtn:" destination="12b-ax-Hvp" eventType="touchUpInside" id="M36-yg-lct"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.68174238779999996" green="0.98496986040000001" blue="0.71789505259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -908,7 +920,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$40 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti6-oI-pCa">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$65 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti6-oI-pCa">
                                                             <rect key="frame" x="0.0" y="30" width="128" height="20"/>
                                                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -926,6 +938,9 @@
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onGOOGBtn:" destination="12b-ax-Hvp" eventType="touchUpInside" id="f1X-iI-Ul4"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.68174238779999996" green="0.98496986040000001" blue="0.71789505259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -965,7 +980,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$40 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11C-Zc-1P2">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$90 / s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11C-Zc-1P2">
                                                             <rect key="frame" x="0.0" y="30" width="128" height="20"/>
                                                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -983,6 +998,9 @@
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onAMZNBtn:" destination="12b-ax-Hvp" eventType="touchUpInside" id="Tsu-1X-dXO"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.68174238779999996" green="0.98496986040000001" blue="0.71789505259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -80,6 +80,43 @@ class InvestTVC: UITableViewController {
         NFLX_Income.text = "$\(Int(stocks[3]?.profile?.price ?? 0.0) / 20) / s"
         GOOG_Income.text = "$\(Int(stocks[4]?.profile?.price ?? 0.0) / 20) / s"
         AMZN_Income.text = "$\(Int(stocks[5]?.profile?.price ?? 0.0) / 20) / s"
+        
+        if let game = CoreDataStack.shared.Game.first as? Game {
+            let boolArray = determineInvestments(storedVal: Int(game.investments))
+            print(boolArray)
+            
+            if boolArray[0] {
+                disableBtn(button: MSFT_Price)
+            } else {
+                MSFT_Price.setTitle(formatAsCurrencyNoCommas(stocks[0]?.profile?.price), for: .normal)
+            }
+            if boolArray[1] {
+                disableBtn(button: FB_Price)
+            } else {
+                FB_Price.setTitle(formatAsCurrencyNoCommas(stocks[1]?.profile?.price), for: .normal)
+            }
+            if boolArray[2] {
+                disableBtn(button: AAPL_Price)
+            } else {
+                AAPL_Price.setTitle(formatAsCurrencyNoCommas(stocks[2]?.profile?.price), for: .normal)
+            }
+            if boolArray[3] {
+                disableBtn(button: NFLX_Price)
+            } else {
+                NFLX_Price.setTitle(formatAsCurrencyNoCommas(stocks[3]?.profile?.price), for: .normal)
+            }
+            if boolArray[4] {
+                disableBtn(button: GOOG_Price)
+            } else {
+                GOOG_Price.setTitle(formatAsCurrencyNoCommas(stocks[4]?.profile?.price), for: .normal)
+            }
+            if boolArray[5] {
+                disableBtn(button: AMZN_Price)
+            } else {
+                AMZN_Price.setTitle(formatAsCurrencyNoCommas(stocks[5]?.profile?.price), for: .normal)
+            }
+            
+        }
     }
     
     // MARK: - Buttons
@@ -91,6 +128,89 @@ class InvestTVC: UITableViewController {
     
     // MARK: - Actions
 
+    @IBAction func onMSFTBtn(_ sender: UIButton) {
+        if let game = CoreDataStack.shared.Game.first as? Game {
+            if game.balance >= Int(stocks[0]?.profile?.price ?? 0.0) {
+                game.balance -= Int16(stocks[0]?.profile?.price ?? 0.0)
+                game.investments = (game.investments * 10) + 1
+                game.income += Int16(stocks[0]?.profile?.price ?? 0.0) / 20
+                disableBtn(button: MSFT_Price)
+                delegate?.refresh()
+            } else {
+                noMoneyAlert()
+            }
+        }
+    }
+    
+    @IBAction func onFBBtn(_ sender: UIButton) {
+        if let game = CoreDataStack.shared.Game.first as? Game {
+            if game.balance >= Int(stocks[1]?.profile?.price ?? 0.0) {
+                game.balance -= Int16(stocks[1]?.profile?.price ?? 0.0)
+                game.investments = (game.investments * 10) + 2
+                game.income += Int16(stocks[1]?.profile?.price ?? 0.0) / 20
+                disableBtn(button: FB_Price)
+                delegate?.refresh()
+            } else {
+                noMoneyAlert()
+            }
+        }
+    }
+    
+    @IBAction func onAAPLBtn(_ sender: UIButton) {
+        if let game = CoreDataStack.shared.Game.first as? Game {
+            if game.balance >= Int(stocks[2]?.profile?.price ?? 0.0) {
+                game.balance -= Int16(stocks[2]?.profile?.price ?? 0.0)
+                game.investments = (game.investments * 10) + 3
+                game.income += Int16(stocks[2]?.profile?.price ?? 0.0) / 20
+                disableBtn(button: AAPL_Price)
+                delegate?.refresh()
+            } else {
+                noMoneyAlert()
+            }
+        }
+    }
+    
+    @IBAction func onNFLXBtn(_ sender: UIButton) {
+        if let game = CoreDataStack.shared.Game.first as? Game {
+            if game.balance >= Int(stocks[3]?.profile?.price ?? 0.0) {
+                game.balance -= Int16(stocks[3]?.profile?.price ?? 0.0)
+                game.investments = (game.investments * 10) + 4
+                game.income += Int16(stocks[3]?.profile?.price ?? 0.0) / 20
+                disableBtn(button: NFLX_Price)
+                delegate?.refresh()
+            } else {
+                noMoneyAlert()
+            }
+        }
+    }
+    
+    @IBAction func onGOOGBtn(_ sender: UIButton) {
+        if let game = CoreDataStack.shared.Game.first as? Game {
+            if game.balance >= Int(stocks[4]?.profile?.price ?? 0.0) {
+                game.balance -= Int16(stocks[4]?.profile?.price ?? 0.0)
+                game.investments = (game.investments * 10) + 5
+                game.income += Int16(stocks[4]?.profile?.price ?? 0.0) / 20
+                disableBtn(button: GOOG_Price)
+                delegate?.refresh()
+            } else {
+                noMoneyAlert()
+            }
+        }
+    }
+    
+    @IBAction func onAMZNBtn(_ sender: UIButton) {
+        if let game = CoreDataStack.shared.Game.first as? Game {
+            if game.balance >= Int(stocks[5]?.profile?.price ?? 0.0) {
+                game.balance -= Int16(stocks[5]?.profile?.price ?? 0.0)
+                game.investments = (game.investments * 10) + 6
+                game.income += Int16(stocks[5]?.profile?.price ?? 0.0) / 20
+                disableBtn(button: AMZN_Price)
+                delegate?.refresh()
+            } else {
+                noMoneyAlert()
+            }
+        }
+    }
     
     // MARK: - Outlets
     
@@ -112,4 +232,47 @@ class InvestTVC: UITableViewController {
     @IBOutlet weak var AMZN_Income: UILabel!
     @IBOutlet weak var AMZN_Price: UIButton!
     
+    // MARK: - Alerts
+    
+    func noMoneyAlert() {
+        
+        let alertMsg = "You don't have enough money!"
+        let alert = UIAlertController(title: "Keep tapping", message: alertMsg, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        alert.popoverPresentationController?.permittedArrowDirections = []
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - Methods
+    
+    func determineIncome(boolArray: [Bool]) -> Int {
+        var income = 0
+        if boolArray[0] {
+            income += (Int(stocks[0]?.profile?.price ?? 0.0) / 20)
+        }
+        if boolArray[1] {
+            income += (Int(stocks[1]?.profile?.price ?? 0.0) / 20)
+        }
+        if boolArray[2] {
+            income += (Int(stocks[2]?.profile?.price ?? 0.0) / 20)
+        }
+        if boolArray[3] {
+            income += (Int(stocks[3]?.profile?.price ?? 0.0) / 20)
+        }
+        if boolArray[4] {
+            income += (Int(stocks[4]?.profile?.price ?? 0.0) / 20)
+        }
+        if boolArray[5] {
+            income += (Int(stocks[5]?.profile?.price ?? 0.0) / 20)
+        }
+        print(income)
+        return income
+    }
 }

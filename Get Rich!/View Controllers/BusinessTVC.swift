@@ -87,7 +87,6 @@ class BusinessTVC: UITableViewController {
     // MARK: - Actions
     
     @IBAction func onMassageBtn(_ sender: UIButton) {
-        print("Pressed massage button")
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= massage_station.purchaseCost {
                 game.balance -= Int16(massage_station.purchaseCost)

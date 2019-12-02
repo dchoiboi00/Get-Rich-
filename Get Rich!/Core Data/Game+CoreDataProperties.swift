@@ -20,7 +20,8 @@ extension Game {
     @NSManaged public var balance: Int16
     @NSManaged public var billSize: Int16
     @NSManaged public var multiplier: Int16
-    @NSManaged public var investments: Int16
+    @NSManaged public var investments: Int32
     @NSManaged public var motto: String?
+    @NSManaged public var income: Int16
 
 }

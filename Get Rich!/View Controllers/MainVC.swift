@@ -29,6 +29,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
         }
         
         refreshLabels()
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -72,7 +73,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
         print("count: \(CoreDataStack.shared.Game.count)")
         if let game = CoreDataStack.shared.Game.first as? Game {
             balanceLabel.text = formatAsCurrency(Double(game.balance))
-            investmentsLabel.text = "\(formatAsCurrency(Double(game.investments)))/s"
+            investmentsLabel.text = "\(formatAsCurrency(Double(game.income))) / s"
             billSizeLabel.text = formatAsCurrency(Double(game.billSize))
             mottoLabel.text = "Motto:   \(game.motto ?? "")"
             multiplierButton.setTitle("x\(game.multiplier.description)", for: .normal)

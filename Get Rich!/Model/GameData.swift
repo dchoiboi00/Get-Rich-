@@ -12,3 +12,15 @@ struct Business {
     var perSwipe: Int
     var purchaseCost: Int
 }
+
+func determineInvestments(storedVal: Int) -> [Bool] {
+    var boolArray = [false, false, false, false, false, false]
+    var x = storedVal
+    while (x > 0) {
+        let num = x % 10
+        let index = num - 1
+        boolArray[index] = true
+        x = x / 10
+    }
+    return boolArray
+}

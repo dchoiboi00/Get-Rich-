@@ -54,6 +54,7 @@ final class CoreDataStack: NSObject {
                 game.setValue(2, forKeyPath: "multiplier")
                 game.setValue(0, forKeyPath: "investments")
                 game.setValue("That man is richest whose pleasures are cheapest.", forKeyPath: "motto")
+                game.setValue(0, forKey: "income")
                 
                 do {
                     try context.save()
@@ -73,6 +74,7 @@ final class CoreDataStack: NSObject {
             game.setValue(2, forKeyPath: "multiplier")
             game.setValue(0, forKeyPath: "investments")
             game.setValue("That man is richest whose pleasures are cheapest.", forKeyPath: "motto")
+            game.setValue(0, forKey: "income")
             
             do {
                 try context.save()

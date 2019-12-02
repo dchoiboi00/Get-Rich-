@@ -40,6 +40,7 @@
 		D205FDA0238CC12100235539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D21B99002391AEB00094934E /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		D21B99042391C0880094934E /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		D22129582394CCA7005C56B8 /* Get_Rich_ 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Get_Rich_ 2.xcdatamodel"; sourceTree = "<group>"; };
 		D251654D23920B04002AD7EF /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		D251654F23920B04002AD7EF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D251655023920B04002AD7EF /* BusinessTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTVC.swift; sourceTree = "<group>"; };
@@ -423,9 +424,10 @@
 		D205FD98238CC12100235539 /* Get_Rich_.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D22129582394CCA7005C56B8 /* Get_Rich_ 2.xcdatamodel */,
 				D205FD99238CC12100235539 /* Get_Rich_.xcdatamodel */,
 			);
-			currentVersion = D205FD99238CC12100235539 /* Get_Rich_.xcdatamodel */;
+			currentVersion = D22129582394CCA7005C56B8 /* Get_Rich_ 2.xcdatamodel */;
 			path = Get_Rich_.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

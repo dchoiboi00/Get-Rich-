@@ -3,11 +3,12 @@
     <entity name="Game" representedClassName="Game" syncable="YES">
         <attribute name="balance" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="billSize" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="income" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="investments" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="motto" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="multiplier" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Game" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Game" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

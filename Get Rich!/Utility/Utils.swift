@@ -17,3 +17,11 @@ func formatAsCurrency(_ price: Double?) -> String {
     return formatter.string(from: NSNumber(value: price ?? 0.0)) ?? ""
 }
 
+func formatAsCurrencyNoCommas(_ price: Double?) -> String {
+    let formatter = NumberFormatter()
+    formatter.usesGroupingSeparator = false
+    formatter.numberStyle = .currency
+    formatter.locale = Locale.current
+    formatter.maximumFractionDigits = 0
+    return formatter.string(from: NSNumber(value: price ?? 0.0)) ?? ""
+}
