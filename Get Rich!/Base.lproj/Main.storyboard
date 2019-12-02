@@ -80,9 +80,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-CH-DkH">
                                                 <rect key="frame" x="0.0" y="16" width="90" height="44"/>
                                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
-                                                <state key="normal" title="x2">
+                                                <state key="normal" title="x1">
                                                     <color key="titleColor" red="0.9469186230964467" green="0.83388970726440903" blue="0.14535525714292755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="DHx-Cq-yz1" kind="popoverPresentation" identifier="MultiplierSegue" popoverAnchorView="CG3-CH-DkH" id="9hw-Md-Odn">
+                                                        <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
+                                                    </segue>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -103,7 +108,7 @@
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l0i-nv-dzy" userLabel="Investment Label">
-                                <rect key="frame" x="87.5" y="707" width="239" height="24"/>
+                                <rect key="frame" x="87.5" y="707" width="239.5" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investment Income:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1L-aO-4vl">
                                         <rect key="frame" x="0.0" y="0.0" width="172.5" height="24"/>
@@ -111,8 +116,8 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$300/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ug-rZ-HmN">
-                                        <rect key="frame" x="182.5" y="0.0" width="56.5" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$35 / s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ug-rZ-HmN">
+                                        <rect key="frame" x="182.5" y="0.0" width="57" height="24"/>
                                         <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1049,6 +1054,157 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9RU-vA-Ady" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130" y="730"/>
+        </scene>
+        <!--MultiplierTVC-->
+        <scene sceneID="Bmi-jP-O2V">
+            <objects>
+                <tableViewController modalPresentationStyle="currentContext" id="DHx-Cq-yz1" customClass="MultiplierTVC" customModule="Get_Rich_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P5q-uB-lH2">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="240"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.71948205691322209" blue="0.25565276264391479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <sections>
+                            <tableViewSection headerTitle="Jackpot time! If you're lucky" id="1mi-hK-k8Y">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="x2" id="MME-I0-7cH">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MME-I0-7cH" id="gwb-nc-SUN">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Uoi-Ex-lhu">
+                                                    <rect key="frame" x="56" y="9.5" width="188" height="51"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-oO-0Sk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="61.5" height="51"/>
+                                                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                                                            <color key="textColor" red="0.28324786063496693" green="0.37163285370816862" blue="0.41790926395939088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pke-Bn-J0Y">
+                                                            <rect key="frame" x="111.5" y="0.0" width="76.5" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="51" id="WqW-g0-bcy"/>
+                                                                <constraint firstAttribute="width" secondItem="pke-Bn-J0Y" secondAttribute="height" multiplier="3:2" id="zo4-Ee-glr"/>
+                                                            </constraints>
+                                                            <state key="normal" title="$200">
+                                                                <color key="titleColor" red="0.17876994115268333" green="0.37484932063612358" blue="0.96080166101455688" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="onX2Btn:" destination="DHx-Cq-yz1" eventType="touchUpInside" id="MuV-nB-cTC"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Uoi-Ex-lhu" firstAttribute="centerX" secondItem="gwb-nc-SUN" secondAttribute="centerX" id="0rO-JD-7th"/>
+                                                <constraint firstItem="Uoi-Ex-lhu" firstAttribute="centerY" secondItem="gwb-nc-SUN" secondAttribute="centerY" id="cQz-Nb-tom"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.7194820569" blue="0.25565276260000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="x3" id="TGu-xk-9vu">
+                                        <rect key="frame" x="0.0" y="98" width="300" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TGu-xk-9vu" id="1XI-mz-osc">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Q-uN-2EJ">
+                                                    <rect key="frame" x="56" y="9.5" width="188" height="51"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06D-aV-UnE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="61.5" height="51"/>
+                                                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                                                            <color key="textColor" red="0.28324786060000001" green="0.37163285369999999" blue="0.417909264" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmT-yT-k0m">
+                                                            <rect key="frame" x="111.5" y="0.0" width="76.5" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="51" id="DLh-DU-5WJ"/>
+                                                                <constraint firstAttribute="width" secondItem="NmT-yT-k0m" secondAttribute="height" multiplier="3:2" id="Tsb-0b-bmt"/>
+                                                            </constraints>
+                                                            <state key="normal" title="$500">
+                                                                <color key="titleColor" red="0.1787699412" green="0.37484932059999998" blue="0.96080166099999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="onX3Btn:" destination="DHx-Cq-yz1" eventType="touchUpInside" id="SPU-k1-nkp"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Z5Q-uN-2EJ" firstAttribute="centerX" secondItem="1XI-mz-osc" secondAttribute="centerX" id="Fmb-64-Ql4"/>
+                                                <constraint firstItem="Z5Q-uN-2EJ" firstAttribute="centerY" secondItem="1XI-mz-osc" secondAttribute="centerY" id="awz-Pb-acV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.7194820569" blue="0.25565276260000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="x4" id="bBy-Pz-1KO">
+                                        <rect key="frame" x="0.0" y="168" width="300" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bBy-Pz-1KO" id="o09-A4-Dke">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="i01-aS-Mlp">
+                                                    <rect key="frame" x="56" y="9.5" width="188" height="51"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hX-8A-ses">
+                                                            <rect key="frame" x="0.0" y="0.0" width="61.5" height="51"/>
+                                                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                                                            <color key="textColor" red="0.28324786060000001" green="0.37163285369999999" blue="0.417909264" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJh-3F-urf">
+                                                            <rect key="frame" x="111.5" y="0.0" width="76.5" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="51" id="Xc4-fV-pp3"/>
+                                                                <constraint firstAttribute="width" secondItem="uJh-3F-urf" secondAttribute="height" multiplier="3:2" id="rh2-Yo-fhY"/>
+                                                            </constraints>
+                                                            <state key="normal" title="$1000">
+                                                                <color key="titleColor" red="0.1787699412" green="0.37484932059999998" blue="0.96080166099999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="onX4Btn:" destination="DHx-Cq-yz1" eventType="touchUpInside" id="OQT-k7-5pD"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="i01-aS-Mlp" firstAttribute="centerY" secondItem="o09-A4-Dke" secondAttribute="centerY" id="GDQ-B2-qGp"/>
+                                                <constraint firstItem="i01-aS-Mlp" firstAttribute="centerX" secondItem="o09-A4-Dke" secondAttribute="centerX" id="VTs-Ro-LJr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.7194820569" blue="0.25565276260000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="DHx-Cq-yz1" id="r7a-Uk-BRa"/>
+                            <outlet property="delegate" destination="DHx-Cq-yz1" id="Ads-gZ-uyh"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="240"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="240"/>
+                    <connections>
+                        <outlet property="x2Btn" destination="pke-Bn-J0Y" id="Y8A-4v-dR1"/>
+                        <outlet property="x3Btn" destination="NmT-yT-k0m" id="b8h-l4-oJ8"/>
+                        <outlet property="x4Btn" destination="uJh-3F-urf" id="vki-if-cvp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUh-br-ZjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="546"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="bEt-tL-zGL">

@@ -56,6 +56,13 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
             }
         case "InfoSegue":
             print("Show info screen")
+        case "MultiplierSegue":
+            print("MultiplierVC")
+            if let vc = segue.destination as? MultiplierTVC {
+                vc.delegate = self
+                vc.modalPresentationStyle = .popover
+                vc.popoverPresentationController!.delegate = self
+            }
         default:
             fatalError("Invalid segue identifier")
         }
@@ -70,7 +77,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
     }
     
     func refreshLabels() {
-        print("count: \(CoreDataStack.shared.Game.count)")
+        print("Core data stack count: \(CoreDataStack.shared.Game.count)")
         if let game = CoreDataStack.shared.Game.first as? Game {
             balanceLabel.text = formatAsCurrency(Double(game.balance))
             investmentsLabel.text = "\(formatAsCurrency(Double(game.income))) / s"

@@ -38,9 +38,7 @@ class BusinessTVC: UITableViewController {
         
         determineBtns()
     }
-
-    // MARK: - Table view data source
-
+    
     // MARK: - Buttons
     
     func determineBtns() {

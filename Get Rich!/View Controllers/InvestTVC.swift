@@ -250,29 +250,4 @@ class InvestTVC: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    // MARK: - Methods
-    
-    func determineIncome(boolArray: [Bool]) -> Int {
-        var income = 0
-        if boolArray[0] {
-            income += (Int(stocks[0]?.profile?.price ?? 0.0) / 20)
-        }
-        if boolArray[1] {
-            income += (Int(stocks[1]?.profile?.price ?? 0.0) / 20)
-        }
-        if boolArray[2] {
-            income += (Int(stocks[2]?.profile?.price ?? 0.0) / 20)
-        }
-        if boolArray[3] {
-            income += (Int(stocks[3]?.profile?.price ?? 0.0) / 20)
-        }
-        if boolArray[4] {
-            income += (Int(stocks[4]?.profile?.price ?? 0.0) / 20)
-        }
-        if boolArray[5] {
-            income += (Int(stocks[5]?.profile?.price ?? 0.0) / 20)
-        }
-        print(income)
-        return income
-    }
 }

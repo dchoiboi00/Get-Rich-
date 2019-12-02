@@ -17,6 +17,7 @@
 		D205FD9F238CC12100235539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D205FD9D238CC12100235539 /* LaunchScreen.storyboard */; };
 		D21B99012391AEB00094934E /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B99002391AEB00094934E /* GameData.swift */; };
 		D21B99052391C0880094934E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B99042391C0880094934E /* BundleExtension.swift */; };
+		D221295A2395BE76005C56B8 /* MultiplierTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22129592395BE76005C56B8 /* MultiplierTVC.swift */; };
 		D251655223920B04002AD7EF /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251654D23920B04002AD7EF /* SettingsVC.swift */; };
 		D251655423920B04002AD7EF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251654F23920B04002AD7EF /* AboutViewController.swift */; };
 		D251655523920B04002AD7EF /* BusinessTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251655023920B04002AD7EF /* BusinessTVC.swift */; };
@@ -41,6 +42,7 @@
 		D21B99002391AEB00094934E /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		D21B99042391C0880094934E /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		D22129582394CCA7005C56B8 /* Get_Rich_ 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Get_Rich_ 2.xcdatamodel"; sourceTree = "<group>"; };
+		D22129592395BE76005C56B8 /* MultiplierTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplierTVC.swift; sourceTree = "<group>"; };
 		D251654D23920B04002AD7EF /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		D251654F23920B04002AD7EF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D251655023920B04002AD7EF /* BusinessTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTVC.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				D251654F23920B04002AD7EF /* AboutViewController.swift */,
 				D251655023920B04002AD7EF /* BusinessTVC.swift */,
+				D22129592395BE76005C56B8 /* MultiplierTVC.swift */,
 				D251655923920BAD002AD7EF /* InvestTVC.swift */,
 				D251655123920B04002AD7EF /* MainVC.swift */,
 				D251654D23920B04002AD7EF /* SettingsVC.swift */,
@@ -209,6 +212,7 @@
 			files = (
 				D251655523920B04002AD7EF /* BusinessTVC.swift in Sources */,
 				D2E6797723946D4300FD07F1 /* StockQuoteHelper.swift in Sources */,
+				D221295A2395BE76005C56B8 /* MultiplierTVC.swift in Sources */,
 				D251655A23920BAD002AD7EF /* InvestTVC.swift in Sources */,
 				D21B99012391AEB00094934E /* GameData.swift in Sources */,
 				D251655423920B04002AD7EF /* AboutViewController.swift in Sources */,
