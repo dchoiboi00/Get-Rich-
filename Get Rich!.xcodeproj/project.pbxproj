@@ -23,6 +23,8 @@
 		D251655623920B04002AD7EF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251655123920B04002AD7EF /* MainVC.swift */; };
 		D251655A23920BAD002AD7EF /* InvestTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251655923920BAD002AD7EF /* InvestTVC.swift */; };
 		D2A0A507238DBD5200B16027 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A0A506238DBD5200B16027 /* Utils.swift */; };
+		D2E6797723946D4300FD07F1 /* StockQuoteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E6797523946D4300FD07F1 /* StockQuoteHelper.swift */; };
+		D2E6797823946D4300FD07F1 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E6797623946D4300FD07F1 /* Stock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		D251655123920B04002AD7EF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D251655923920BAD002AD7EF /* InvestTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestTVC.swift; sourceTree = "<group>"; };
 		D2A0A506238DBD5200B16027 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D2E6797523946D4300FD07F1 /* StockQuoteHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteHelper.swift; sourceTree = "<group>"; };
+		D2E6797623946D4300FD07F1 /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				D21B99002391AEB00094934E /* GameData.swift */,
+				D2E6797623946D4300FD07F1 /* Stock.swift */,
+				D2E6797523946D4300FD07F1 /* StockQuoteHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,12 +207,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D251655523920B04002AD7EF /* BusinessTVC.swift in Sources */,
+				D2E6797723946D4300FD07F1 /* StockQuoteHelper.swift in Sources */,
 				D251655A23920BAD002AD7EF /* InvestTVC.swift in Sources */,
 				D21B99012391AEB00094934E /* GameData.swift in Sources */,
 				D251655423920B04002AD7EF /* AboutViewController.swift in Sources */,
 				D205FD9A238CC12100235539 /* Get_Rich_.xcdatamodeld in Sources */,
 				D203C6F1239078DC00289A0E /* CoreDataStack.swift in Sources */,
 				D205FD92238CC12100235539 /* AppDelegate.swift in Sources */,
+				D2E6797823946D4300FD07F1 /* Stock.swift in Sources */,
 				D203C6EE23906E8000289A0E /* Game+CoreDataProperties.swift in Sources */,
 				D2A0A507238DBD5200B16027 /* Utils.swift in Sources */,
 				D203C6ED23906E8000289A0E /* Game+CoreDataClass.swift in Sources */,

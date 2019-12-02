@@ -9,6 +9,11 @@
 import UIKit
 import CoreData
 
+enum URLError: Error {
+    case BadURL
+    case NotImplementedYet
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
