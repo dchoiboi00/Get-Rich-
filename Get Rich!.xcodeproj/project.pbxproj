@@ -26,6 +26,7 @@
 		D2A0A507238DBD5200B16027 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A0A506238DBD5200B16027 /* Utils.swift */; };
 		D2E6797723946D4300FD07F1 /* StockQuoteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E6797523946D4300FD07F1 /* StockQuoteHelper.swift */; };
 		D2E6797823946D4300FD07F1 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E6797623946D4300FD07F1 /* Stock.swift */; };
+		D2F5F9B42397050B00CD45BB /* whoosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F9B32397050B00CD45BB /* whoosh.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		D2A0A506238DBD5200B16027 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D2E6797523946D4300FD07F1 /* StockQuoteHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteHelper.swift; sourceTree = "<group>"; };
 		D2E6797623946D4300FD07F1 /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		D2F5F9B32397050B00CD45BB /* whoosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whoosh.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				D2BFEEC3239209FF0076ECA5 /* Model */,
 				D21B99082391C0B60094934E /* Utility */,
 				D205FD9B238CC12100235539 /* Assets.xcassets */,
+				D2F5F9B22397050B00CD45BB /* Audio Files */,
 				D205FD9D238CC12100235539 /* LaunchScreen.storyboard */,
 				D205FDA0238CC12100235539 /* Info.plist */,
 				D203C6EF23906E9900289A0E /* Core Data */,
@@ -137,6 +140,14 @@
 				D2E6797523946D4300FD07F1 /* StockQuoteHelper.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D2F5F9B22397050B00CD45BB /* Audio Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2F5F9B32397050B00CD45BB /* whoosh.mp3 */,
+			);
+			path = "Audio Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F5F9B42397050B00CD45BB /* whoosh.mp3 in Resources */,
 				D205FD9F238CC12100235539 /* LaunchScreen.storyboard in Resources */,
 				D205FD9C238CC12100235539 /* Assets.xcassets in Resources */,
 				D205FD97238CC12100235539 /* Main.storyboard in Resources */,

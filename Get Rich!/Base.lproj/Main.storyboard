@@ -100,13 +100,6 @@
                                     <constraint firstAttribute="height" constant="60" id="G9F-3a-l1A"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billStack" translatesAutoresizingMaskIntoConstraints="NO" id="oXI-ME-413">
-                                <rect key="frame" x="20" y="756" width="374" height="16"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="MF6-p6-3fm" appends="YES" id="Qi5-29-9tk"/>
-                                </connections>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l0i-nv-dzy" userLabel="Investment Label">
                                 <rect key="frame" x="87.5" y="707" width="239.5" height="24"/>
                                 <subviews>
@@ -124,23 +117,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2,439" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO7-qJ-AE8">
-                                <rect key="frame" x="120" y="94" width="174" height="72"/>
-                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUW-08-se8">
-                                <rect key="frame" x="61" y="733.5" width="116" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="9mk-6r-NKW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motto: Placeholder" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zS9-Tc-r3A">
-                                <rect key="frame" x="50" y="216" width="314" height="28.5"/>
+                                <rect key="frame" x="50" y="210" width="314" height="28.5"/>
                                 <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -176,37 +154,101 @@
                                     <constraint firstItem="v9q-GY-jdj" firstAttribute="width" secondItem="tcc-gf-U0V" secondAttribute="width" id="gNm-7A-svS"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billStack" translatesAutoresizingMaskIntoConstraints="NO" id="4lJ-bi-PMG" userLabel="animate_stack1">
+                                <rect key="frame" x="50" y="-100" width="103" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="13G-0U-jPV"/>
+                                    <constraint firstAttribute="width" constant="103" id="LpX-O7-AtV"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DS4-c3-6zP">
+                                <rect key="frame" x="50" y="74" width="314" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2,439" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO7-qJ-AE8">
+                                        <rect key="frame" x="70" y="28" width="174" height="72"/>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WO7-qJ-AE8" firstAttribute="centerY" secondItem="DS4-c3-6zP" secondAttribute="centerY" id="M5K-Da-gFV"/>
+                                    <constraint firstItem="WO7-qJ-AE8" firstAttribute="top" secondItem="DS4-c3-6zP" secondAttribute="top" constant="28" id="Sv2-DZ-l0m"/>
+                                    <constraint firstItem="WO7-qJ-AE8" firstAttribute="centerX" secondItem="DS4-c3-6zP" secondAttribute="centerX" id="dgJ-gi-ceh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddf-x0-duy">
+                                <rect key="frame" x="20" y="756" width="374" height="16"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billStack" translatesAutoresizingMaskIntoConstraints="NO" id="oXI-ME-413">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="16"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="MF6-p6-3fm" appends="YES" id="Qi5-29-9tk"/>
+                                            <outletCollection property="gestureRecognizers" destination="yuz-OT-404" appends="YES" id="7q8-N7-5mu"/>
+                                        </connections>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUW-08-se8">
+                                        <rect key="frame" x="42" y="-23.5" width="116" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="9mk-6r-NKW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wUW-08-se8" firstAttribute="centerX" secondItem="Ddf-x0-duy" secondAttribute="centerX" constant="-87" id="I1B-qS-68k"/>
+                                    <constraint firstAttribute="trailing" secondItem="oXI-ME-413" secondAttribute="trailing" id="XWe-Cw-8m8"/>
+                                    <constraint firstAttribute="bottom" secondItem="oXI-ME-413" secondAttribute="bottom" id="c2V-8v-qzr"/>
+                                    <constraint firstItem="oXI-ME-413" firstAttribute="top" secondItem="Ddf-x0-duy" secondAttribute="top" id="gan-4f-rd5"/>
+                                    <constraint firstItem="wUW-08-se8" firstAttribute="centerY" secondItem="Ddf-x0-duy" secondAttribute="centerY" constant="-13" id="l9E-xe-otw"/>
+                                    <constraint firstItem="oXI-ME-413" firstAttribute="leading" secondItem="Ddf-x0-duy" secondAttribute="leading" id="yEf-9Y-RWF"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackpot" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-dv-t4u">
+                                <rect key="frame" x="199" y="440" width="16" height="16"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.55968848852838959" green="0.76021996871675257" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="WO7-qJ-AE8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="45T-VU-HUQ"/>
-                            <constraint firstItem="WO7-qJ-AE8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cab-ek-rPd"/>
-                            <constraint firstItem="zS9-Tc-r3A" firstAttribute="top" secondItem="WO7-qJ-AE8" secondAttribute="bottom" constant="50" id="IR8-ca-eva"/>
+                            <constraint firstItem="2aD-dv-t4u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3wy-uQ-j2l"/>
+                            <constraint firstItem="zS9-Tc-r3A" firstAttribute="top" secondItem="DS4-c3-6zP" secondAttribute="bottom" constant="8" symbolic="YES" id="F4V-GE-1g5"/>
+                            <constraint firstItem="Ddf-x0-duy" firstAttribute="top" secondItem="l0i-nv-dzy" secondAttribute="bottom" constant="25" id="Ljx-0y-g5m"/>
+                            <constraint firstItem="DS4-c3-6zP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="OKl-SN-cyL"/>
                             <constraint firstItem="CbG-4Y-gdb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ovp-Lz-6N3"/>
+                            <constraint firstItem="2aD-dv-t4u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QY3-Hh-Qbq"/>
                             <constraint firstItem="l0i-nv-dzy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="an2-rc-1Ga"/>
-                            <constraint firstItem="oXI-ME-413" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bhX-r8-xkg"/>
+                            <constraint firstItem="4lJ-bi-PMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cKZ-la-tUo"/>
+                            <constraint firstItem="CbG-4Y-gdb" firstAttribute="top" secondItem="Ddf-x0-duy" secondAttribute="bottom" constant="40" id="foi-rN-VKE"/>
                             <constraint firstItem="CbG-4Y-gdb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="g5O-ip-rNZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Yy-ii-POg" secondAttribute="trailing" constant="10" id="gat-l1-wXc"/>
+                            <constraint firstItem="DS4-c3-6zP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="hUp-Pe-Ozc"/>
                             <constraint firstItem="zS9-Tc-r3A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="iau-TQ-MM5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wUW-08-se8" secondAttribute="trailing" symbolic="YES" id="nUf-cE-4K8"/>
-                            <constraint firstItem="wUW-08-se8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="pme-Nf-Ii9"/>
-                            <constraint firstAttribute="trailing" secondItem="oXI-ME-413" secondAttribute="trailing" constant="20" id="qjk-xW-mg3"/>
+                            <constraint firstItem="Ddf-x0-duy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kOW-cd-DLQ"/>
+                            <constraint firstItem="4lJ-bi-PMG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-100" id="nZg-VF-qCC"/>
                             <constraint firstAttribute="bottom" secondItem="8Yy-ii-POg" secondAttribute="bottom" constant="15" id="s8X-0Q-1CO"/>
+                            <constraint firstItem="DS4-c3-6zP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tYK-PA-e5L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zS9-Tc-r3A" secondAttribute="trailing" constant="50" id="uGB-VE-Vhu"/>
-                            <constraint firstItem="wUW-08-se8" firstAttribute="centerY" secondItem="oXI-ME-413" secondAttribute="centerY" constant="-12" id="ui8-5S-WcU"/>
-                            <constraint firstItem="oXI-ME-413" firstAttribute="top" secondItem="l0i-nv-dzy" secondAttribute="bottom" constant="25" id="x5x-X7-yoG"/>
-                            <constraint firstItem="CbG-4Y-gdb" firstAttribute="top" secondItem="oXI-ME-413" secondAttribute="bottom" constant="40" id="xkG-BI-5Y6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DS4-c3-6zP" secondAttribute="trailing" constant="50" id="yvr-t4-mer"/>
                             <constraint firstItem="8Yy-ii-POg" firstAttribute="leading" secondItem="CbG-4Y-gdb" secondAttribute="trailing" constant="5" id="zuo-Ov-CwO"/>
-                            <constraint firstItem="oXI-ME-413" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zv5-GY-hpU"/>
+                            <constraint firstItem="Ddf-x0-duy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zxt-CW-Cht"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="balanceLabel" destination="WO7-qJ-AE8" id="0Se-0m-i6n"/>
+                        <outlet property="balanceView" destination="DS4-c3-6zP" id="0FF-3x-zY7"/>
                         <outlet property="billSizeLabel" destination="wUW-08-se8" id="WCB-nw-Y6d"/>
+                        <outlet property="billView" destination="Ddf-x0-duy" id="epj-GS-NJv"/>
+                        <outlet property="fallingStackLeftConstraint" destination="cKZ-la-tUo" id="U7v-b5-B8u"/>
+                        <outlet property="fallingStackTopConstraint" destination="nZg-VF-qCC" id="MhH-3p-Da7"/>
                         <outlet property="investmentsLabel" destination="6ug-rZ-HmN" id="x6Z-fd-HBH"/>
+                        <outlet property="jackpotImage" destination="2aD-dv-t4u" id="4WJ-aI-SIk"/>
                         <outlet property="mottoLabel" destination="zS9-Tc-r3A" id="Vfy-EO-wc7"/>
                         <outlet property="multiplierButton" destination="CG3-CH-DkH" id="zOq-fm-Hj2"/>
+                        <outlet property="tapGestureRecognizer" destination="MF6-p6-3fm" id="Rix-Vd-sSm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -216,6 +258,12 @@
                         <outlet property="delegate" destination="8bC-Xf-vdC" id="xnl-Mj-tGI"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="yuz-OT-404">
+                    <connections>
+                        <action selector="onLongPress:" destination="BYZ-38-t0r" id="uT2-dW-1K1"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="gEg-qp-uC0"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
@@ -1297,6 +1345,7 @@
         <image name="checkmark" width="300" height="230.5"/>
         <image name="handshake" width="320.5" height="183.5"/>
         <image name="investments" width="786.5" height="880"/>
+        <image name="jackpot" width="400" height="288"/>
         <image name="jersey" width="216.5" height="220.5"/>
         <image name="jewelry" width="422.5" height="298.5"/>
         <image name="lemonade_stand" width="352.5" height="406.5"/>

@@ -131,7 +131,7 @@ class InvestTVC: UITableViewController {
     @IBAction func onMSFTBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= Int(stocks[0]?.profile?.price ?? 0.0) {
-                game.balance -= Int16(stocks[0]?.profile?.price ?? 0.0)
+                game.balance -= Int64(stocks[0]?.profile?.price ?? 0.0)
                 game.investments = (game.investments * 10) + 1
                 game.income += Int16(stocks[0]?.profile?.price ?? 0.0) / 20
                 disableBtn(button: MSFT_Price)
@@ -145,7 +145,7 @@ class InvestTVC: UITableViewController {
     @IBAction func onFBBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= Int(stocks[1]?.profile?.price ?? 0.0) {
-                game.balance -= Int16(stocks[1]?.profile?.price ?? 0.0)
+                game.balance -= Int64(stocks[1]?.profile?.price ?? 0.0)
                 game.investments = (game.investments * 10) + 2
                 game.income += Int16(stocks[1]?.profile?.price ?? 0.0) / 20
                 disableBtn(button: FB_Price)
@@ -159,7 +159,7 @@ class InvestTVC: UITableViewController {
     @IBAction func onAAPLBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= Int(stocks[2]?.profile?.price ?? 0.0) {
-                game.balance -= Int16(stocks[2]?.profile?.price ?? 0.0)
+                game.balance -= Int64(stocks[2]?.profile?.price ?? 0.0)
                 game.investments = (game.investments * 10) + 3
                 game.income += Int16(stocks[2]?.profile?.price ?? 0.0) / 20
                 disableBtn(button: AAPL_Price)
@@ -173,7 +173,7 @@ class InvestTVC: UITableViewController {
     @IBAction func onNFLXBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= Int(stocks[3]?.profile?.price ?? 0.0) {
-                game.balance -= Int16(stocks[3]?.profile?.price ?? 0.0)
+                game.balance -= Int64(stocks[3]?.profile?.price ?? 0.0)
                 game.investments = (game.investments * 10) + 4
                 game.income += Int16(stocks[3]?.profile?.price ?? 0.0) / 20
                 disableBtn(button: NFLX_Price)
@@ -187,7 +187,7 @@ class InvestTVC: UITableViewController {
     @IBAction func onGOOGBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= Int(stocks[4]?.profile?.price ?? 0.0) {
-                game.balance -= Int16(stocks[4]?.profile?.price ?? 0.0)
+                game.balance -= Int64(stocks[4]?.profile?.price ?? 0.0)
                 game.investments = (game.investments * 10) + 5
                 game.income += Int16(stocks[4]?.profile?.price ?? 0.0) / 20
                 disableBtn(button: GOOG_Price)
@@ -201,7 +201,7 @@ class InvestTVC: UITableViewController {
     @IBAction func onAMZNBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= Int(stocks[5]?.profile?.price ?? 0.0) {
-                game.balance -= Int16(stocks[5]?.profile?.price ?? 0.0)
+                game.balance -= Int64(stocks[5]?.profile?.price ?? 0.0)
                 game.investments = (game.investments * 10) + 6
                 game.income += Int16(stocks[5]?.profile?.price ?? 0.0) / 20
                 disableBtn(button: AMZN_Price)

@@ -87,7 +87,7 @@ class BusinessTVC: UITableViewController {
     @IBAction func onMassageBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= massage_station.purchaseCost {
-                game.balance -= Int16(massage_station.purchaseCost)
+                game.balance -= Int64(massage_station.purchaseCost)
                 game.billSize = Int16(massage_station.perSwipe)
                 disableBtn(button: massageBtn)
                 delegate?.refresh()
@@ -100,7 +100,7 @@ class BusinessTVC: UITableViewController {
     @IBAction func onPastaBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= pasta_bar.purchaseCost {
-                game.balance -= Int16(pasta_bar.purchaseCost)
+                game.balance -= Int64(pasta_bar.purchaseCost)
                 game.billSize = Int16(pasta_bar.perSwipe)
                 disableBtn(button: pastaBtn)
                 delegate?.refresh()
@@ -113,7 +113,7 @@ class BusinessTVC: UITableViewController {
     @IBAction func onSalonBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= beauty_salon.purchaseCost {
-                game.balance -= Int16(beauty_salon.purchaseCost)
+                game.balance -= Int64(beauty_salon.purchaseCost)
                 game.billSize = Int16(beauty_salon.perSwipe)
                 disableBtn(button: salonBtn)
                 delegate?.refresh()
@@ -126,7 +126,7 @@ class BusinessTVC: UITableViewController {
     @IBAction func onJerseyBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= jersey_shop.purchaseCost {
-                game.balance -= Int16(jersey_shop.purchaseCost)
+                game.balance -= Int64(jersey_shop.purchaseCost)
                 game.billSize = Int16(jersey_shop.perSwipe)
                 disableBtn(button: jerseyBtn)
                 delegate?.refresh()
@@ -139,7 +139,7 @@ class BusinessTVC: UITableViewController {
     @IBAction func onJewelryBtn(_ sender: UIButton) {
         if let game = CoreDataStack.shared.Game.first as? Game {
             if game.balance >= luxury_jewelry.purchaseCost {
-                game.balance -= Int16(luxury_jewelry.purchaseCost)
+                game.balance -= Int64(luxury_jewelry.purchaseCost)
                 game.billSize = Int16(luxury_jewelry.perSwipe)
                 disableBtn(button: jewelryBtn)
                 delegate?.refresh()

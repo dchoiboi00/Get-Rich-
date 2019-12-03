@@ -17,7 +17,7 @@ extension Game {
         return NSFetchRequest<Game>(entityName: "Game")
     }
 
-    @NSManaged public var balance: Int16
+    @NSManaged public var balance: Int64
     @NSManaged public var billSize: Int16
     @NSManaged public var multiplier: Int16
     @NSManaged public var investments: Int32
