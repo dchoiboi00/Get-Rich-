@@ -47,26 +47,16 @@ final class CoreDataStack: NSObject {
     override init() {
         super.init()
         if Game.count == 0 {
-            if let entity = NSEntityDescription.entity(forEntityName: "Game", in: context) {
-                let game = NSManagedObject(entity: entity, insertInto: context)
-                game.setValue(0, forKeyPath: "balance")
-                game.setValue(1, forKeyPath: "billSize")
-                game.setValue(1, forKeyPath: "multiplier")
-                game.setValue(0, forKeyPath: "investments")
-                game.setValue("That man is richest whose pleasures are cheapest.", forKeyPath: "motto")
-                game.setValue(0, forKey: "income")
-                
-                do {
-                    try context.save()
-                } catch let error as NSError {
-                    print("Could not initialize the game. \(error), \(error.userInfo)")
-                }
-            }
+            initGame()
         }
         update()
     }
     
     func initAfterReset(){
+        initGame()
+    }
+    
+    func initGame() {
         if let entity = NSEntityDescription.entity(forEntityName: "Game", in: context) {
             let game = NSManagedObject(entity: entity, insertInto: context)
             game.setValue(0, forKeyPath: "balance")

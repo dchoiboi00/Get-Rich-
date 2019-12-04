@@ -12,7 +12,7 @@ func formatAsCurrency(_ price: Double?) -> String {
     let formatter = NumberFormatter()
     formatter.usesGroupingSeparator = true
     formatter.numberStyle = .currency
-    formatter.locale = Locale.current
+    formatter.locale = Locale.init(identifier: UserDefaults.standard.string(forKey: "currency") ?? "en_US")
     formatter.maximumFractionDigits = 0
     return formatter.string(from: NSNumber(value: price ?? 0.0)) ?? ""
 }

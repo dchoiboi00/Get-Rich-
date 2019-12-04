@@ -24,3 +24,23 @@ func determineInvestments(storedVal: Int) -> [Bool] {
     }
     return boolArray
 }
+
+enum CurrencyType: Int {
+    case USD, EUR, KRW, GBP
+    static let allValues = [USD, EUR, KRW, GBP]
+    
+    func title() -> String {
+        switch self {
+        case .USD:
+            return "US Dollars"
+        case .EUR:
+            return "Euro"
+        case .KRW:
+            return "Korean Won"
+        case .GBP:
+            return "UK Pounds"
+        }
+    }
+    
+    
+}

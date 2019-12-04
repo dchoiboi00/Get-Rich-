@@ -11,18 +11,17 @@ import AVFoundation
 
 class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, requiresRefreshDelegate {
     
-    var tooManyCount: Bool = {
-        return CoreDataStack.shared.Game.count > 1
-    }()
-    
     var gameTimer: Timer?
     
     var flippedOn10000 = false
     
-    let defaults = UserDefaults.standard
     
     
     var audioPlayer: AVAudioPlayer?
+    
+    var tooManyCount: Bool = {
+        return CoreDataStack.shared.Game.count > 1
+    }()
     
     // MARK: - Outlets
     @IBOutlet weak var balanceLabel: UILabel!
@@ -48,6 +47,12 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
         
         refreshLabels()
         
+        if UserDefaults.standard.bool(forKey: "color") {
+            self.view.backgroundColor = UIColor.init(red: 249.0/255.0, green: 191.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        } else {
+            self.view.backgroundColor = UIColor.init(red: 143.0/255.0, green: 194.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,23 +72,20 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
                 vc.popoverPresentationController!.delegate = self
             }
         case "InvestSegue":
-            print("Invest")
             if let vc = segue.destination as? InvestTVC {
                 vc.delegate = self
                 vc.modalPresentationStyle = .popover
                 vc.popoverPresentationController!.delegate = self
             }
         case "SettingsSegue":
-            print("Settings")
             if let vc = segue.destination as? SettingsVC {
                 vc.delegate = self
                 vc.modalPresentationStyle = .popover
                 vc.popoverPresentationController?.delegate = self
             }
         case "InfoSegue":
-            print("Show info screen")
+            let _ = false  //executable
         case "MultiplierSegue":
-            print("MultiplierVC")
             if let vc = segue.destination as? MultiplierTVC {
                 vc.delegate = self
                 vc.modalPresentationStyle = .popover
@@ -92,10 +94,6 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
         default:
             fatalError("Invalid segue identifier")
         }
-    }
-    
-    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
-        print("Did dismiss popover")
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
@@ -116,7 +114,6 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
     }
     
     @objc func updateFrame(){
-        print("updated frame")
         if let game = CoreDataStack.shared.Game.first as? Game {
             
             if game.income != 0 {
@@ -150,6 +147,12 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
             }
             
             
+        }
+        
+        if UserDefaults.standard.bool(forKey: "color") {
+            self.view.backgroundColor = UIColor.init(red: 249.0/255.0, green: 191.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        } else {
+            self.view.backgroundColor = UIColor.init(red: 143.0/255.0, green: 194.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
     }
     
@@ -200,7 +203,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
         }
         stackFallingAnimation()
 
-        if (true){
+        if (UserDefaults.standard.bool(forKey: "sound")){
             playWhoosh()
         }
         

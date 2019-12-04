@@ -8,14 +8,33 @@
 
 import UIKit
 
-class SettingsVC: UIViewController {
+class SettingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     weak var delegate: requiresRefreshDelegate?
+    @IBOutlet weak var soundSwitch: UISwitch!
+    @IBOutlet weak var colorSwitch: UISwitch!
+    @IBOutlet weak var currencyPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        determineSwitches()
+    }
+    
+    // MARK: - Functions
+    
+    func determineSwitches() {
+        if UserDefaults.standard.bool(forKey: "sound") {
+            soundSwitch.setOn(true, animated: false)
+        } else {
+            soundSwitch.setOn(false, animated: false)
+        }
+        
+        if UserDefaults.standard.bool(forKey: "color") {
+            colorSwitch.setOn(true, animated: false)
+        } else {
+            colorSwitch.setOn(false, animated: false)
+        }
     }
     
     // MARK: - Actions
@@ -27,6 +46,15 @@ class SettingsVC: UIViewController {
             self.delegate?.refresh()
         }
     }
+    
+    @IBAction func onSoundSwitch(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "sound")
+    }
+    
+    @IBAction func onColorSwitch(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "color")
+    }
+    
     
     // MARK: - Alerts
     
@@ -46,6 +74,34 @@ class SettingsVC: UIViewController {
         alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - PickerView
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return CurrencyType.allValues.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return CurrencyType(rawValue: row)?.title()
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if row == 0 {
+            UserDefaults.standard.set("en_US", forKey: "currency")
+        } else if row == 1 {
+            UserDefaults.standard.set("de_DE", forKey: "currency")
+        } else if row == 2 {
+            UserDefaults.standard.set("ko_KR", forKey: "currency")
+        } else if row == 3 {
+            UserDefaults.standard.set("en_GB", forKey: "currency")
+        } else {
+            return
+        }
     }
 
 }
