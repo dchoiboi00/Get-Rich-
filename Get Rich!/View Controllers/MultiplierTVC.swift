@@ -30,17 +30,17 @@ class MultiplierTVC: UITableViewController {
         if let game = CoreDataStack.shared.Game.first as? Game {
             
             if game.multiplier < 2 {
-                x2Btn.setTitle("$200", for: .normal)
+                x2Btn.setTitle(formatAsCurrencyNoCommas(Double(200)), for: .normal)
             } else {
                 disableBtn(button: x2Btn)
             }
             if game.multiplier < 3 {
-                x3Btn.setTitle("$500", for: .normal)
+                x3Btn.setTitle(formatAsCurrencyNoCommas(Double(500)), for: .normal)
             } else {
                 disableBtn(button: x3Btn)
             }
             if game.multiplier < 4 {
-                x4Btn.setTitle("$1000", for: .normal)
+                x4Btn.setTitle(formatAsCurrencyNoCommas(Double(1000)), for: .normal)
             } else {
                 disableBtn(button: x4Btn)
             }

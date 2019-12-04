@@ -154,6 +154,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
         } else {
             self.view.backgroundColor = UIColor.init(red: 143.0/255.0, green: 194.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
+        refreshLabels()
     }
     
     // MARK: - Animations
@@ -218,6 +219,12 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
             flipBills()
         }
     }
+    
+    @IBAction func onChangeMotto(_ sender: UIButton) {
+        
+        
+    }
+    
     
     // MARK: - Audio
     

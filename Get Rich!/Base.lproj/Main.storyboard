@@ -210,9 +210,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackpot" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-dv-t4u">
                                 <rect key="frame" x="199" y="440" width="16" height="16"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXF-87-hHm">
+                                <rect key="frame" x="158" y="243.5" width="98" height="30"/>
+                                <state key="normal" title="Change Motto"/>
+                                <connections>
+                                    <action selector="onChangeMotto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dal-5L-YC5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.74901960784313726" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="JXF-87-hHm" firstAttribute="top" secondItem="zS9-Tc-r3A" secondAttribute="bottom" constant="5" id="1VC-0D-O8c"/>
                             <constraint firstItem="2aD-dv-t4u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3wy-uQ-j2l"/>
                             <constraint firstItem="zS9-Tc-r3A" firstAttribute="top" secondItem="DS4-c3-6zP" secondAttribute="bottom" constant="8" symbolic="YES" id="F4V-GE-1g5"/>
                             <constraint firstItem="Ddf-x0-duy" firstAttribute="top" secondItem="l0i-nv-dzy" secondAttribute="bottom" constant="25" id="Ljx-0y-g5m"/>
@@ -221,6 +229,7 @@
                             <constraint firstItem="2aD-dv-t4u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QY3-Hh-Qbq"/>
                             <constraint firstItem="l0i-nv-dzy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="an2-rc-1Ga"/>
                             <constraint firstItem="4lJ-bi-PMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cKZ-la-tUo"/>
+                            <constraint firstItem="JXF-87-hHm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dFO-vz-20R"/>
                             <constraint firstItem="CbG-4Y-gdb" firstAttribute="top" secondItem="Ddf-x0-duy" secondAttribute="bottom" constant="40" id="foi-rN-VKE"/>
                             <constraint firstItem="CbG-4Y-gdb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="g5O-ip-rNZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Yy-ii-POg" secondAttribute="trailing" constant="10" id="gat-l1-wXc"/>
@@ -427,7 +436,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="rDj-j2-OhU" secondAttribute="height" multiplier="1:1" id="6fq-Ux-8ES"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
                                                     <state key="normal" image="checkmark">
                                                         <color key="titleColor" red="0.28087373465334942" green="0.40154706996641143" blue="0.98042076826095581" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -484,7 +493,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="kKq-E0-PcG" secondAttribute="height" multiplier="1:1" id="7T0-KR-Snc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
                                                     <state key="normal" title="$50">
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -544,7 +553,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="f2M-48-zxo" secondAttribute="height" multiplier="1:1" id="5YB-va-7Hq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
                                                     <state key="normal" title="$300">
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -604,7 +613,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Bng-4s-wyK" secondAttribute="height" multiplier="1:1" id="x8U-Sr-kBP"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
                                                     <state key="normal" title="$500">
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -664,8 +673,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="rPe-hs-Lwz" secondAttribute="height" multiplier="1:1" id="mzM-ty-fOx"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                    <state key="normal" title="$1K">
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                                    <state key="normal" title="$1000">
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -724,8 +733,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="sUe-NM-t0c" secondAttribute="height" multiplier="1:1" id="Ww3-hV-tM4"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                    <state key="normal" title="$5K">
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12.699999809265137"/>
+                                                    <state key="normal" title="$5000">
                                                         <color key="titleColor" red="0.28087373469999999" green="0.40154707000000001" blue="0.98042076830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -760,11 +769,23 @@
                     <size key="freeformSize" width="300" height="450"/>
                     <connections>
                         <outlet property="jerseyBtn" destination="rPe-hs-Lwz" id="5D6-g4-3QJ"/>
+                        <outlet property="jerseyIncome" destination="ClD-2M-fsu" id="vFL-f5-WWJ"/>
+                        <outlet property="jerseyLabel" destination="fFI-Xw-eKp" id="1nx-6i-LA2"/>
                         <outlet property="jewelryBtn" destination="sUe-NM-t0c" id="OUg-xq-4MK"/>
+                        <outlet property="jewelryIncome" destination="bGV-1D-Sr8" id="CC7-Mm-zLO"/>
+                        <outlet property="jewelryLabel" destination="amt-fl-5wa" id="lVf-Ev-9en"/>
                         <outlet property="lemonadeBtn" destination="rDj-j2-OhU" id="qCx-3B-PA3"/>
+                        <outlet property="lemonadeIncome" destination="NCk-Za-D0h" id="dy5-1E-22u"/>
+                        <outlet property="lemonadeLabel" destination="bLR-yq-Lbf" id="fUY-6V-ZPJ"/>
                         <outlet property="massageBtn" destination="kKq-E0-PcG" id="6A7-sZ-g3W"/>
+                        <outlet property="massageIncome" destination="BvX-mk-waK" id="92Q-Cc-fil"/>
+                        <outlet property="massageLabel" destination="xN3-H5-08z" id="bj5-pu-BOs"/>
                         <outlet property="pastaBtn" destination="f2M-48-zxo" id="Wbs-om-haC"/>
+                        <outlet property="pastaIncome" destination="nEO-MB-Ice" id="c6L-dy-xLb"/>
+                        <outlet property="pastaLabel" destination="vf6-JQ-PeW" id="yQk-bZ-m8t"/>
                         <outlet property="salonBtn" destination="Bng-4s-wyK" id="tkh-2j-kYR"/>
+                        <outlet property="salonIncome" destination="dar-rl-LtC" id="ftc-o4-hgM"/>
+                        <outlet property="salonLabel" destination="aTW-XY-7dk" id="S4P-Nd-9qM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvC-uA-nHd" userLabel="First Responder" sceneMemberID="firstResponder"/>

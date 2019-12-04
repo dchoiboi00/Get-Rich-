@@ -11,6 +11,12 @@ import UIKit
 class SettingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     weak var delegate: requiresRefreshDelegate?
+    
+    var selected: Int {
+        return UserDefaults.standard.integer(forKey: "selected")
+    }
+    
+    // MARK: - Outlets
     @IBOutlet weak var soundSwitch: UISwitch!
     @IBOutlet weak var colorSwitch: UISwitch!
     @IBOutlet weak var currencyPicker: UIPickerView!
@@ -35,6 +41,8 @@ class SettingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         } else {
             colorSwitch.setOn(false, animated: false)
         }
+        
+        currencyPicker.selectRow(selected, inComponent: 0, animated: false)
     }
     
     // MARK: - Actions
@@ -94,14 +102,13 @@ class SettingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         if row == 0 {
             UserDefaults.standard.set("en_US", forKey: "currency")
         } else if row == 1 {
-            UserDefaults.standard.set("de_DE", forKey: "currency")
+            UserDefaults.standard.set("zh_CN", forKey: "currency")
         } else if row == 2 {
-            UserDefaults.standard.set("ko_KR", forKey: "currency")
-        } else if row == 3 {
             UserDefaults.standard.set("en_GB", forKey: "currency")
-        } else {
-            return
         }
+        
+        UserDefaults.standard.set(row, forKey: "selected")
+        
     }
 
 }

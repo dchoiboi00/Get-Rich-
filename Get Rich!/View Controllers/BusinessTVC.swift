@@ -32,16 +32,38 @@ class BusinessTVC: UITableViewController {
     @IBOutlet weak var jerseyBtn: UIButton!
     @IBOutlet weak var jewelryBtn: UIButton!
     
+    @IBOutlet weak var lemonadeIncome: UILabel!
+    @IBOutlet weak var massageIncome: UILabel!
+    @IBOutlet weak var pastaIncome: UILabel!
+    @IBOutlet weak var salonIncome: UILabel!
+    @IBOutlet weak var jerseyIncome: UILabel!
+    @IBOutlet weak var jewelryIncome: UILabel!
+    
+    @IBOutlet weak var lemonadeLabel: UILabel!
+    @IBOutlet weak var massageLabel: UILabel!
+    @IBOutlet weak var pastaLabel: UILabel!
+    @IBOutlet weak var salonLabel: UILabel!
+    @IBOutlet weak var jerseyLabel: UILabel!
+    @IBOutlet weak var jewelryLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        determineBtns()
+        updateUI()
     }
     
     // MARK: - Buttons
     
-    func determineBtns() {
+    func updateUI() {
+        lemonadeIncome.text = "\(formatAsCurrencyNoCommas(Double(lemonade_stand.perSwipe))) / tap"
+        massageIncome.text = "\(formatAsCurrencyNoCommas(Double(massage_station.perSwipe))) / tap"
+        pastaIncome.text = "\(formatAsCurrencyNoCommas(Double(pasta_bar.perSwipe))) / tap"
+        salonIncome.text = "\(formatAsCurrencyNoCommas(Double(beauty_salon.perSwipe))) / tap"
+        jerseyIncome.text = "\(formatAsCurrencyNoCommas(Double(jersey_shop.perSwipe))) / tap"
+        jewelryIncome.text = "\(formatAsCurrencyNoCommas(Double(luxury_jewelry.perSwipe))) / tap"
+        
+        
         if let game = CoreDataStack.shared.Game.first as? Game {
             disableBtn(button: lemonadeBtn)
             
@@ -64,13 +86,13 @@ class BusinessTVC: UITableViewController {
             }
             
             if game.billSize < jersey_shop.perSwipe {
-                jerseyBtn.setTitle("$1K", for: .normal)
+                jerseyBtn.setTitle(formatAsCurrencyNoCommas(Double(jersey_shop.purchaseCost)), for: .normal)
             } else {
                 disableBtn(button: jerseyBtn)
             }
             
             if game.billSize < luxury_jewelry.perSwipe {
-                jewelryBtn.setTitle("$5K", for: .normal)
+                jewelryBtn.setTitle(formatAsCurrencyNoCommas(Double(luxury_jewelry.purchaseCost)), for: .normal)
             } else {
                 disableBtn(button: jewelryBtn)
             }

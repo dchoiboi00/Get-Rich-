@@ -25,7 +25,7 @@ class InvestTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("loading request for all 6 stocks")
+        
         let group = DispatchGroup()
         group.enter()
         self.loadRequest(symbolString: "MSFT", stockIndex: 0) {
@@ -73,17 +73,15 @@ class InvestTVC: UITableViewController {
     }
     
     func updateUI() {
-        print("Ran updateUI")
-        MSFT_Income.text = "$\(Int(stocks[0]?.profile?.price ?? 0.0) / 20) / s"
-        FB_Income.text = "$\(Int(stocks[1]?.profile?.price ?? 0.0) / 20) / s"
-        AAPL_Income.text = "$\(Int(stocks[2]?.profile?.price ?? 0.0) / 20) / s"
-        NFLX_Income.text = "$\(Int(stocks[3]?.profile?.price ?? 0.0) / 20) / s"
-        GOOG_Income.text = "$\(Int(stocks[4]?.profile?.price ?? 0.0) / 20) / s"
-        AMZN_Income.text = "$\(Int(stocks[5]?.profile?.price ?? 0.0) / 20) / s"
+        MSFT_Income.text = "\(formatAsCurrencyNoCommas((stocks[0]?.profile?.price ?? 0.0) / 20)) / s"
+        FB_Income.text = "\(formatAsCurrencyNoCommas((stocks[1]?.profile?.price ?? 0.0) / 20)) / s"
+        AAPL_Income.text = "\(formatAsCurrencyNoCommas((stocks[2]?.profile?.price ?? 0.0) / 20)) / s"
+        NFLX_Income.text = "\(formatAsCurrencyNoCommas((stocks[3]?.profile?.price ?? 0.0) / 20)) / s"
+        GOOG_Income.text = "\(formatAsCurrencyNoCommas((stocks[4]?.profile?.price ?? 0.0) / 20)) / s"
+        AMZN_Income.text = "\(formatAsCurrencyNoCommas((stocks[5]?.profile?.price ?? 0.0) / 20)) / s"
         
         if let game = CoreDataStack.shared.Game.first as? Game {
             let boolArray = determineInvestments(storedVal: Int(game.investments))
-            print(boolArray)
             
             if boolArray[0] {
                 disableBtn(button: MSFT_Price)

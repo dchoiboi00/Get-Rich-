@@ -26,17 +26,15 @@ func determineInvestments(storedVal: Int) -> [Bool] {
 }
 
 enum CurrencyType: Int {
-    case USD, EUR, KRW, GBP
-    static let allValues = [USD, EUR, KRW, GBP]
+    case USD, CNY, GBP
+    static let allValues = [USD, CNY, GBP]
     
     func title() -> String {
         switch self {
         case .USD:
             return "US Dollars"
-        case .EUR:
-            return "Euro"
-        case .KRW:
-            return "Korean Won"
+        case .CNY:
+            return "Chinese Yuan"
         case .GBP:
             return "UK Pounds"
         }
