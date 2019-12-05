@@ -36,10 +36,24 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
     @IBOutlet weak var billView: UIView!
     @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
     
+    @IBOutlet weak var changeMottoBtn: UIButton!
+    @IBOutlet weak var investIncomeLabel: UILabel!
+    @IBOutlet weak var businessLabel: UILabel!
+    @IBOutlet weak var investmentsWordLabel: UILabel!
+    @IBOutlet weak var multiplierWordLabel: UILabel!
+    
     // MARK: - View Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Localizing strings
+        changeMottoBtn.setTitle(NSLocalizedString("str_changeMottoActionSheetTitle", comment: ""), for: .normal)
+        investIncomeLabel.text = NSLocalizedString("str_investmentIncome", comment: "")
+        businessLabel.text = NSLocalizedString("str_business", comment: "")
+        investmentsWordLabel.text = NSLocalizedString("str_investments", comment: "")
+        multiplierWordLabel.text = NSLocalizedString("str_multiplier", comment: "")
+        
         
         if tooManyCount {
             CoreDataStack.shared.deleteLast()
@@ -105,7 +119,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
     func refreshLabels() {
         if let game = CoreDataStack.shared.Game.first as? Game {
             balanceLabel.text = formatAsCurrency(Double(game.balance))
-            investmentsLabel.text = "\(formatAsCurrency(Double(game.income))) / s"
+            investmentsLabel.text = "\(formatAsCurrency(Double(game.income))) / \(NSLocalizedString("str_seconds", comment: ""))"
             billSizeLabel.text = formatAsCurrency(Double(game.billSize))
             mottoLabel.text = game.motto
             multiplierButton.setTitle("x\(game.multiplier.description)", for: .normal)
@@ -222,35 +236,35 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
     
     @IBAction func onChangeMotto(_ sender: UIButton) {
         changeMottoActionSheet(chooseCompletion: { _ in
-            let alert = UIAlertController(title: "Choose a motto", message: "Whose quote would you like to use?", preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: NSLocalizedString("str_chooseMotto", comment: ""), message: NSLocalizedString("str_chooseMottoMsg", comment: ""), preferredStyle: .actionSheet)
             
-            let quote1 = UIAlertAction(title: "Warren Buffett", style: .default) { [unowned self] action in
+            let quote1 = UIAlertAction(title: NSLocalizedString("str_author1", comment: ""), style: .default) { [unowned self] action in
                 if let game = CoreDataStack.shared.Game.first as? Game {
-                    game.motto = "You try to be greedy when others are fearful. And you try to be fearful when others are greedy."
+                    game.motto = NSLocalizedString("str_quote1", comment: "")
                 }
                 self.refreshLabels()
             }
-            let quote2 = UIAlertAction(title: "Will Rogers", style: .default) { [unowned self] action in
+            let quote2 = UIAlertAction(title: NSLocalizedString("str_author2", comment: ""), style: .default) { [unowned self] action in
                 if let game = CoreDataStack.shared.Game.first as? Game {
-                    game.motto = "Too many people spend money they earned, to buy things they don't want, to impress people that they don't like."
+                    game.motto = NSLocalizedString("str_quote2", comment: "")
                 }
                 self.refreshLabels()
             }
-            let quote3 = UIAlertAction(title: "Jonathan Swift", style: .default) { [unowned self] action in
+            let quote3 = UIAlertAction(title: NSLocalizedString("str_author3", comment: ""), style: .default) { [unowned self] action in
                 if let game = CoreDataStack.shared.Game.first as? Game {
-                    game.motto = "A wise person should have money in their head, but not in their heart."
+                    game.motto = NSLocalizedString("str_quote3", comment: "")
                 }
                 self.refreshLabels()
             }
-            let quote4 = UIAlertAction(title: "Benjamin Franklin", style: .default) { [unowned self] action in
+            let quote4 = UIAlertAction(title: NSLocalizedString("str_author4", comment: ""), style: .default) { [unowned self] action in
                 if let game = CoreDataStack.shared.Game.first as? Game {
-                    game.motto = "An investment in knowledge pays the best interest."
+                    game.motto = NSLocalizedString("str_quote4", comment: "")
                 }
                 self.refreshLabels()
             }
-            let quote5 = UIAlertAction(title: "Thomas Edison", style: .default) { [unowned self] action in
+            let quote5 = UIAlertAction(title: NSLocalizedString("str_author5", comment: ""), style: .default) { [unowned self] action in
                 if let game = CoreDataStack.shared.Game.first as? Game {
-                    game.motto = "Opportunity is missed by most people because it is dressed in overalls and looks like work."
+                    game.motto = NSLocalizedString("str_quote5", comment: "")
                 }
                 self.refreshLabels()
             }
@@ -261,11 +275,15 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
             alert.addAction(quote4)
             alert.addAction(quote5)
             
+            alert.popoverPresentationController?.permittedArrowDirections = []
+            alert.popoverPresentationController?.sourceView = self.view
+            alert.popoverPresentationController?.sourceRect = CGRect.init(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
+            
             self.present(alert, animated: true)
         }, typeCompletion: { _ in
-            let alert = UIAlertController(title: "My motto", message: "What do you have to say about wealth?", preferredStyle: .alert)
+            let alert = UIAlertController(title: NSLocalizedString("str_myMotto", comment: ""), message: NSLocalizedString("str_myMottoMsg", comment: ""), preferredStyle: .alert)
             
-            let saveAction = UIAlertAction(title: "Save", style: .default) { [unowned self] action in
+            let saveAction = UIAlertAction(title: NSLocalizedString("str_save", comment: ""), style: .default) { [unowned self] action in
                 guard let mottoTextField = alert.textFields?[0],
                     let motto = mottoTextField.text else { return }
                 if let game = CoreDataStack.shared.Game.first as? Game {
@@ -273,10 +291,10 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
                 }
                 self.refreshLabels()
             }
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            let cancelAction = UIAlertAction(title: NSLocalizedString("str_cancel", comment: ""), style: .cancel)
             
             alert.addTextField(configurationHandler: { textField in
-                textField.placeholder = "My motto"
+                textField.placeholder = NSLocalizedString("str_myMotto", comment: "")
             })
             
             alert.addAction(saveAction)
@@ -313,12 +331,12 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
     
     func changeMottoActionSheet(chooseCompletion: @escaping (UIAlertAction) -> Void, typeCompletion: @escaping (UIAlertAction) -> Void){
         
-        let alertMsg = "Choose a motto or type in your own!"
-        let alert = UIAlertController(title: "Change Motto", message: alertMsg, preferredStyle: .actionSheet)
+        let alertMsg = NSLocalizedString("str_changeMottoActionSheetMsg", comment: "")
+        let alert = UIAlertController(title: NSLocalizedString("str_changeMottoActionSheetTitle", comment: ""), message: alertMsg, preferredStyle: .actionSheet)
         
-        let chooseAction = UIAlertAction(title: "Choose a motto", style: .default, handler: chooseCompletion)
-        let typeAction = UIAlertAction(title: "My own motto", style: .default, handler: typeCompletion)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let chooseAction = UIAlertAction(title: NSLocalizedString("str_chooseMotto", comment: ""), style: .default, handler: chooseCompletion)
+        let typeAction = UIAlertAction(title: NSLocalizedString("str_myOwnMotto", comment: ""), style: .default, handler: typeCompletion)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("str_cancel", comment: ""), style: .cancel, handler: nil)
         
         alert.addAction(chooseAction)
         alert.addAction(typeAction)

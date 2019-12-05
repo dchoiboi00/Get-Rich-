@@ -21,9 +21,22 @@ class SettingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     @IBOutlet weak var colorSwitch: UISwitch!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
+    @IBOutlet weak var resetGameLabel: UILabel!
+    @IBOutlet weak var soundLabel: UILabel!
+    @IBOutlet weak var pinkBgLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var resetBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Localizing strings
+        resetGameLabel.text = NSLocalizedString("str_resetGame", comment: "")
+        soundLabel.text = NSLocalizedString("str_sound", comment: "")
+        pinkBgLabel.text = NSLocalizedString("str_pinkbg", comment: "")
+        currencyLabel.text = NSLocalizedString("str_currency", comment: "")
+        resetBtn.setTitle(NSLocalizedString("str_reset", comment: ""), for: .normal)
+        
         determineSwitches()
     }
     
@@ -68,11 +81,11 @@ class SettingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     func resetAlert(completion: @escaping (UIAlertAction) -> Void) {
         
-        let alertMsg = "This will erase all of your progress."
-        let alert = UIAlertController(title: "Warning!", message: alertMsg, preferredStyle: .alert)
+        let alertMsg = NSLocalizedString("str_resetAlertMsg", comment: "")
+        let alert = UIAlertController(title: NSLocalizedString("str_resetAlertTitle", comment: ""), message: alertMsg, preferredStyle: .alert)
         
-        let resetAction = UIAlertAction(title: "Reset", style: .destructive, handler: completion)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        let resetAction = UIAlertAction(title: NSLocalizedString("str_reset", comment: ""), style: .destructive, handler: completion)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("str_cancel", comment: ""), style: .default, handler: nil)
         
         alert.addAction(resetAction)
         alert.addAction(cancelAction)

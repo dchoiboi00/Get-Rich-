@@ -32,11 +32,11 @@ enum CurrencyType: Int {
     func title() -> String {
         switch self {
         case .USD:
-            return "US Dollars"
+            return NSLocalizedString("str_US Dollars", comment: "")
         case .CNY:
-            return "Chinese Yuan"
+            return NSLocalizedString("str_Chinese Yuan", comment: "")
         case .GBP:
-            return "UK Pounds"
+            return NSLocalizedString("str_UK Pounds", comment: "")
         }
     }
     

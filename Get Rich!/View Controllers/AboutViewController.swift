@@ -19,12 +19,12 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        appNameLabel.text = Bundle.main.displayName
+        appNameLabel.text = NSLocalizedString("str_bundleName", comment: "")
         appVersionLabel.text = Bundle.main.version
         buildLabel.text = Bundle.main.build
         copyrightLabel.text = Bundle.main.copyright
 
-        doneBtn.setTitle("Done", for: .normal)
+        doneBtn.setTitle(NSLocalizedString("str_done", comment: ""), for: .normal)
     }
    
     @IBAction func onDoneBtn(_ sender: UIButton) {

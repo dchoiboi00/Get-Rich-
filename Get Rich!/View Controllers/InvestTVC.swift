@@ -21,10 +21,26 @@ class InvestTVC: UITableViewController {
         return URLSession(configuration: config)
     }()
     
+    // MARK: - Outlets
+    
+    @IBOutlet weak var microsoftLabel: UILabel!
+    @IBOutlet weak var facebookLabel: UILabel!
+    @IBOutlet weak var appleLabel: UILabel!
+    @IBOutlet weak var netflixLabel: UILabel!
+    @IBOutlet weak var alphabetLabel: UILabel!
+    @IBOutlet weak var amazonLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Localizing strings
+        microsoftLabel.text = NSLocalizedString("str_microsoft", comment: "")
+        facebookLabel.text = NSLocalizedString("str_facebook", comment: "")
+        appleLabel.text = NSLocalizedString("str_apple", comment: "")
+        netflixLabel.text = NSLocalizedString("str_netflix", comment: "")
+        alphabetLabel.text = NSLocalizedString("str_alphabet", comment: "")
+        amazonLabel.text = NSLocalizedString("str_amazon", comment: "")
         
         let group = DispatchGroup()
         group.enter()
@@ -73,12 +89,12 @@ class InvestTVC: UITableViewController {
     }
     
     func updateUI() {
-        MSFT_Income.text = "\(formatAsCurrencyNoCommas((stocks[0]?.profile?.price ?? 0.0) / 20)) / s"
-        FB_Income.text = "\(formatAsCurrencyNoCommas((stocks[1]?.profile?.price ?? 0.0) / 20)) / s"
-        AAPL_Income.text = "\(formatAsCurrencyNoCommas((stocks[2]?.profile?.price ?? 0.0) / 20)) / s"
-        NFLX_Income.text = "\(formatAsCurrencyNoCommas((stocks[3]?.profile?.price ?? 0.0) / 20)) / s"
-        GOOG_Income.text = "\(formatAsCurrencyNoCommas((stocks[4]?.profile?.price ?? 0.0) / 20)) / s"
-        AMZN_Income.text = "\(formatAsCurrencyNoCommas((stocks[5]?.profile?.price ?? 0.0) / 20)) / s"
+        MSFT_Income.text = "\(formatAsCurrencyNoCommas((stocks[0]?.profile?.price ?? 0.0) / 20)) / \(NSLocalizedString("str_seconds", comment: ""))"
+        FB_Income.text = "\(formatAsCurrencyNoCommas((stocks[1]?.profile?.price ?? 0.0) / 20)) / \(NSLocalizedString("str_seconds", comment: ""))"
+        AAPL_Income.text = "\(formatAsCurrencyNoCommas((stocks[2]?.profile?.price ?? 0.0) / 20)) / \(NSLocalizedString("str_seconds", comment: ""))"
+        NFLX_Income.text = "\(formatAsCurrencyNoCommas((stocks[3]?.profile?.price ?? 0.0) / 20)) / \(NSLocalizedString("str_seconds", comment: ""))"
+        GOOG_Income.text = "\(formatAsCurrencyNoCommas((stocks[4]?.profile?.price ?? 0.0) / 20)) / \(NSLocalizedString("str_seconds", comment: ""))"
+        AMZN_Income.text = "\(formatAsCurrencyNoCommas((stocks[5]?.profile?.price ?? 0.0) / 20)) / \(NSLocalizedString("str_seconds", comment: ""))"
         
         if let game = CoreDataStack.shared.Game.first as? Game {
             let boolArray = determineInvestments(storedVal: Int(game.investments))
@@ -234,10 +250,10 @@ class InvestTVC: UITableViewController {
     
     func noMoneyAlert() {
         
-        let alertMsg = "You don't have enough money!"
-        let alert = UIAlertController(title: "Keep tapping", message: alertMsg, preferredStyle: .alert)
+        let alertMsg = NSLocalizedString("str_noMoneyAlertMsg", comment: "")
+        let alert = UIAlertController(title: NSLocalizedString("str_noMoneyAlertTitle", comment: ""), message: alertMsg, preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: NSLocalizedString("str_okay", comment: ""), style: .default, handler: nil)
         
         alert.addAction(okAction)
         
@@ -248,4 +264,7 @@ class InvestTVC: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return NSLocalizedString("str_investTVCHeader", comment: "")
+    }
 }

@@ -98,10 +98,10 @@ class MultiplierTVC: UITableViewController {
     
     func noMoneyAlert() {
         
-        let alertMsg = "You don't have enough money!"
-        let alert = UIAlertController(title: "Keep tapping", message: alertMsg, preferredStyle: .alert)
+        let alertMsg = NSLocalizedString("str_noMoneyAlertMsg", comment: "")
+        let alert = UIAlertController(title: NSLocalizedString("str_noMoneyAlertTitle", comment: ""), message: alertMsg, preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: NSLocalizedString("str_okay", comment: ""), style: .default, handler: nil)
         
         alert.addAction(okAction)
         
@@ -110,6 +110,10 @@ class MultiplierTVC: UITableViewController {
         alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return NSLocalizedString("str_multiplierTVCHeader", comment: "")
     }
 
 }

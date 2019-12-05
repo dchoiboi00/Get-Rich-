@@ -50,18 +50,27 @@ class BusinessTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Localizing strings
+        lemonadeLabel.text = NSLocalizedString("str_lemonadeStand", comment: "")
+        massageLabel.text = NSLocalizedString("str_massageStation", comment: "")
+        pastaLabel.text = NSLocalizedString("str_pastaBar", comment: "")
+        salonLabel.text = NSLocalizedString("str_beautySalon", comment: "")
+        jerseyLabel.text = NSLocalizedString("str_jerseyShop", comment: "")
+        jewelryLabel.text = NSLocalizedString("str_luxuryJewelry", comment: "")
+
+        
         updateUI()
     }
     
     // MARK: - Buttons
     
     func updateUI() {
-        lemonadeIncome.text = "\(formatAsCurrencyNoCommas(Double(lemonade_stand.perSwipe))) / tap"
-        massageIncome.text = "\(formatAsCurrencyNoCommas(Double(massage_station.perSwipe))) / tap"
-        pastaIncome.text = "\(formatAsCurrencyNoCommas(Double(pasta_bar.perSwipe))) / tap"
-        salonIncome.text = "\(formatAsCurrencyNoCommas(Double(beauty_salon.perSwipe))) / tap"
-        jerseyIncome.text = "\(formatAsCurrencyNoCommas(Double(jersey_shop.perSwipe))) / tap"
-        jewelryIncome.text = "\(formatAsCurrencyNoCommas(Double(luxury_jewelry.perSwipe))) / tap"
+        lemonadeIncome.text = "\(formatAsCurrencyNoCommas(Double(lemonade_stand.perSwipe))) / \(NSLocalizedString("str_tap", comment: ""))"
+        massageIncome.text = "\(formatAsCurrencyNoCommas(Double(massage_station.perSwipe))) / \(NSLocalizedString("str_tap", comment: ""))"
+        pastaIncome.text = "\(formatAsCurrencyNoCommas(Double(pasta_bar.perSwipe))) / \(NSLocalizedString("str_tap", comment: ""))"
+        salonIncome.text = "\(formatAsCurrencyNoCommas(Double(beauty_salon.perSwipe))) / \(NSLocalizedString("str_tap", comment: ""))"
+        jerseyIncome.text = "\(formatAsCurrencyNoCommas(Double(jersey_shop.perSwipe))) / \(NSLocalizedString("str_tap", comment: ""))"
+        jewelryIncome.text = "\(formatAsCurrencyNoCommas(Double(luxury_jewelry.perSwipe))) / \(NSLocalizedString("str_tap", comment: ""))"
         
         
         if let game = CoreDataStack.shared.Game.first as? Game {
@@ -175,10 +184,10 @@ class BusinessTVC: UITableViewController {
     
     func noMoneyAlert() {
         
-        let alertMsg = "You don't have enough money!"
-        let alert = UIAlertController(title: "Keep tapping", message: alertMsg, preferredStyle: .alert)
+        let alertMsg = NSLocalizedString("str_noMoneyAlertMsg", comment: "")
+        let alert = UIAlertController(title: NSLocalizedString("str_noMoneyAlertTitle", comment: ""), message: alertMsg, preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: NSLocalizedString("str_okay", comment: ""), style: .default, handler: nil)
         
         alert.addAction(okAction)
         
@@ -187,5 +196,9 @@ class BusinessTVC: UITableViewController {
         alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return NSLocalizedString("str_businessTVCHeader", comment: "")
     }
 }
