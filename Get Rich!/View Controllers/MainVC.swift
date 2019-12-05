@@ -15,8 +15,6 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
     
     var flippedOn10000 = false
     
-    
-    
     var audioPlayer: AVAudioPlayer?
     
     var tooManyCount: Bool = {
@@ -98,7 +96,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
                 vc.popoverPresentationController?.delegate = self
             }
         case "InfoSegue":
-            let _ = false  //executable
+            let _ = false  //executable line
         case "MultiplierSegue":
             if let vc = segue.destination as? MultiplierTVC {
                 vc.delegate = self
@@ -140,13 +138,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
                 if number == 1 {
                     game.balance = game.balance * Int64(game.multiplier)
                     
-                    UIView.animate(withDuration: 1.5, animations: {
-                        self.jackpotImage.alpha = 1.0
-                    }, completion: { _ in
-                        UIView.animate(withDuration: 1.0, animations: {
-                            self.jackpotImage.alpha = 0.0
-                        })
-                    })
+                    animateJackpotImage()
                     
                     flipBills()
                     
@@ -185,6 +177,16 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
                 self.fallingStackTopConstraint.constant -= (self.view.frame.height + 200)
                 self.view.layoutIfNeeded()
                 })
+        })
+    }
+    
+    func animateJackpotImage() {
+        UIView.animate(withDuration: 1.5, animations: {
+            self.jackpotImage.alpha = 1.0
+        }, completion: { _ in
+            UIView.animate(withDuration: 1.0, animations: {
+                self.jackpotImage.alpha = 0.0
+            })
         })
     }
     

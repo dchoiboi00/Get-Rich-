@@ -124,7 +124,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billStack" translatesAutoresizingMaskIntoConstraints="NO" id="4lJ-bi-PMG" userLabel="animate_stack1">
-                                <rect key="frame" x="50" y="-100" width="103.00000000000011" height="80"/>
+                                <rect key="frame" x="50" y="-100" width="103" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="13G-0U-jPV"/>
                                     <constraint firstAttribute="width" constant="103" id="LpX-O7-AtV"/>
@@ -151,7 +151,7 @@
                                 <rect key="frame" x="-2.5" y="345.5" width="419" height="406.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billStack" translatesAutoresizingMaskIntoConstraints="NO" id="oXI-ME-413">
-                                        <rect key="frame" x="0.0" y="0.0" width="419.00000000000011" height="406.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="419" height="406.5"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="MF6-p6-3fm" appends="YES" id="Qi5-29-9tk"/>
@@ -180,7 +180,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackpot" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-dv-t4u">
-                                <rect key="frame" x="7" y="304" width="400" height="288"/>
+                                <rect key="frame" x="199" y="440" width="16" height="16"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXF-87-hHm">
                                 <rect key="frame" x="147.5" y="200" width="119" height="36"/>
@@ -1411,7 +1411,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billStack" translatesAutoresizingMaskIntoConstraints="NO" id="EzD-jL-8pU">
-                                <rect key="frame" x="158" y="293" width="98.000000000000114" height="98"/>
+                                <rect key="frame" x="158" y="293" width="98" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="98" id="SGv-J1-5Bh"/>
                                     <constraint firstAttribute="width" constant="98" id="cf7-vK-yJc"/>
