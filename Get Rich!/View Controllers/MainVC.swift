@@ -288,6 +288,7 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate, require
             let saveAction = UIAlertAction(title: NSLocalizedString("str_save", comment: ""), style: .default) { [unowned self] action in
                 guard let mottoTextField = alert.textFields?[0],
                     let motto = mottoTextField.text else { return }
+                mottoTextField.becomeFirstResponder()
                 if let game = CoreDataStack.shared.Game.first as? Game {
                     game.motto = motto
                 }
