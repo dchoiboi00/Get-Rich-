@@ -8,5 +8,5 @@ There is a multiplier jackpot where if you're lucky, your wealth will double or 
 
 The app is localized also in Korean.
 
-<img src="/Me%20See%20Hero/Assets.xcassets/Add.png" width="300" height="440">
+<img src="/Get%20Rich!/Assets.xcassets/screenshot_main.png" width="300" height="440">
 <img src="/Me%20See%20Hero/Assets.xcassets/DetailVC.png" width="300" height="440">
